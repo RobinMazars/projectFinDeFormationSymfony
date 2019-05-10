@@ -1,0 +1,17 @@
+#frame {
+  margin: auto;
+  width: 500px;
+  height: 500px;
+  padding: 0;
+}
+#svg {
+  width: 100%;
+  height: 100%;
+}
+object {
+  border: 1px black solid;
+}
+#selector > .selected {
+  background-color: red;
+}
+/*# sourceMappingURL=Tapis.css.map */

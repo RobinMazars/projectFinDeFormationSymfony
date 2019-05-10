@@ -1,0 +1,126 @@
+.primaryBackGroundColor {
+  background: #f5f6f6;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #f5f6f6 0%, #dbdce2 21%, #c4c7d3 50%, #dddfe3 80%, #f5f6f6 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #f5f6f6 0%, #dbdce2 21%, #c4c7d3 50%, #dddfe3 80%, #f5f6f6 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #f5f6f6 0%, #dbdce2 21%, #c4c7d3 50%, #dddfe3 80%, #f5f6f6 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f6f6', endColorstr='#f5f6f6', GradientType=1);
+  /* IE6-9 */
+}
+body {
+  width: 98%;
+  margin: auto;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  background-image: url("../media/image/MaxPixel.freegreatpicture.com-Digital-Board-Interfaces-Circuits-Conductors-730793.jpg");
+}
+header {
+  background: #f5f6f6;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #f5f6f6 0%, #dbdce2 21%, #c4c7d3 50%, #dddfe3 80%, #f5f6f6 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #f5f6f6 0%, #dbdce2 21%, #c4c7d3 50%, #dddfe3 80%, #f5f6f6 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #f5f6f6 0%, #dbdce2 21%, #c4c7d3 50%, #dddfe3 80%, #f5f6f6 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f6f6', endColorstr='#f5f6f6', GradientType=1);
+  /* IE6-9 */
+  border: 1px solid black;
+  border-radius: 0 0 10px 10px;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  font-size: 1.5rem;
+  padding: 0 5px;
+  border-radius: 10px;
+}
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 0 5px;
+  border-radius: 10px;
+}
+.sousMenusListe {
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}
+.sousMenusListe li {
+  border-radius: 0;
+  background-color: blue;
+  border: 1px solid black;
+  margin: 0;
+}
+.sousMenusListe li a {
+  color: white;
+}
+h1 {
+  font-size: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  width: 50%;
+  margin: 15px auto;
+  border: 1px solid black;
+}
+h2 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1rem;
+}
+section {
+  width: 90%;
+  margin: 15px auto;
+  padding: 5px ;
+  border: 1px solid black;
+  box-shadow: 0 0 15px;
+  border-radius: 10px;
+  background-color: white;
+}
+#lienRealisation {
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  background: #f5f6f6;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #f5f6f6 0%, #dbdce2 21%, #c4c7d3 50%, #dddfe3 80%, #f5f6f6 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #f5f6f6 0%, #dbdce2 21%, #c4c7d3 50%, #dddfe3 80%, #f5f6f6 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #f5f6f6 0%, #dbdce2 21%, #c4c7d3 50%, #dddfe3 80%, #f5f6f6 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f6f6', endColorstr='#f5f6f6', GradientType=1);
+  /* IE6-9 */
+  border: 1px solid black;
+  border-radius: 10px 10px 0 0;
+}
+@media (min-width: 780px) {
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  #lienRealisation {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+  }
+  header nav {
+    flex: 6;
+  }
+  header img {
+    flex: 1;
+  }
+}
+/*# sourceMappingURL=master.css.map */

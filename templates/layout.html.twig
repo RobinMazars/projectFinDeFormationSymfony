@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fe" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mazars Robin -
+      {% block title %}{% endblock %}
+    </title>
+    {% block link %}
+    {{encore_entry_link_tags('normalize')}}
+    {{encore_entry_link_tags('bar')}}
+    {{encore_entry_link_tags('master')}}
+    {% endblock %}
+  </head>
+  <body>
+    <header>
+      <img src="" alt="Logo">
+      <nav>
+        <ul>
+          <li>
+            <a href="">
+              <i class="fas fa-home"></i>
+              Home</a>
+          </li>
+          <li class="sousMenusTitle">
+            <i class="fas fa-folder-open"></i>
+            <a href="#">Réalisations</a>
+            <ul class="sousMenusListe">
+              <li>
+                <a href="">Piece CSS</a>
+              </li>
+              <li>
+                <a href="">jsGame</a>
+              </li>
+
+              <li>
+                <a href="">BDD</a>
+              </li>
+              <li>
+                <a href="">Tapie</a>
+              </li>
+            </ul>
+
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fas fa-file"></i>
+              CV</a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-envelope"></i>
+              Me contacter</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    {% block content %}{% endblock %}
+    <footer>
+      <nav>
+        <ul>
+          <li>
+            <a href="">
+              <i class="fas fa-home"></i>
+              Home</a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-envelope"></i>
+              Me contacter</a>
+          </li>
+        </ul>
+      </nav>
+      <small>Site Web créer par Mazars Robin</small>
+      <small>2018</small>
+    </footer>
+
+  </body>
+</html>
