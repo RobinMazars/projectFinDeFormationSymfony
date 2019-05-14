@@ -1,3 +1,8 @@
+#sousSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 #frame {
   margin: auto;
   width: 500px;
@@ -11,7 +16,35 @@
 object {
   border: 1px black solid;
 }
+#selector {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.selectorItem {
+  padding: 15%;
+}
 #selector > .selected {
   background-color: red;
+}
+#loadSave {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 25%;
+  font-size: 0.9rem;
+}
+.saveLoad-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2%;
+}
+.load.notSave,
+.supre.notSave {
+  filter: opacity(0.5);
+}
+.save:not(.empty) {
+  filter: opacity(0.5);
 }
 /*# sourceMappingURL=Tapis.css.map */

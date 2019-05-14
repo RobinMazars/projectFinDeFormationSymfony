@@ -1,0 +1,17 @@
+{% extends 'layout.html.twig' %}
+{% block title %}BDD{% endblock %}
+{% block link %}
+{{parent()}}
+
+{% endblock %}
+{% block content %}
+{{nbrPage}}
+<section>
+  <h2>Tableaux</h2>
+
+  <form id="rechercheBar" action="./BddController.php" method="post">
+    <label for="recherche">Rechercher un produit:   </label>
+    <input type="text" name="recherche" value="" required>
+    <input type="submit" name="submitRecherche" value="Enter">
+  </form>
+{% endblock %}

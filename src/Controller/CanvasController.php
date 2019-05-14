@@ -3,13 +3,13 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-class TapisController extends AbstractController
+class CanvasController extends AbstractController
 {
     /**
-     * @Route("/Tapis", name="tapis", methods={"GET"})
+     * @Route("/Canvas", name="canvas", methods={"GET"})
      */
-    public function tapis()
+    public function canvas()
     {
-        return $this->render('tapis/tapis.html.twig');
+        return $this->render('canvas/canvas.html.twig');
     }
 }

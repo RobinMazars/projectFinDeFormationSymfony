@@ -1,12 +1,14 @@
 var Encore = require('@symfony/webpack-encore');
-
+// command for update : yarn encore dev
+// or:  yarn encore dev --watch   for auto update
 Encore
     // directory where compiled assets will be stored
     .setOutputPath('public/build/')
     // public path used by the web server to access the output path
     .setPublicPath('/my-project/public/build')
+    // .setPublicPath('https://code.jquery.com/jquery-3.4.1.js')
     // only needed for CDN's or sub-directory deploy
-    // .setManifestKeyPrefix('my-project')
+    // .setManifestKeyPrefix('build/')
 
     /*
      * ENTRY CONFIG
@@ -18,10 +20,18 @@ Encore
      * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
      */
     // .addEntry('layout', './assets/js/layout.js')
-    .addStyleEntry('master', './assets/css/master.css')
-    .addStyleEntry('normalize', './assets/css/normalize.css')
-    .addStyleEntry('tapis', './assets/css/Tapis/Tapis.css')
-    .addStyleEntry('bar', './assets/css/Bar/Bar.css')
+    .addStyleEntry('masterCss', './assets/css/master.css')
+    .addStyleEntry('normalizeCss', './assets/css/normalize.css')
+    .addStyleEntry('tapisCss', './assets/css/Tapis/tapis.css')
+    .addStyleEntry('barCss', './assets/css/home/bar.css')
+    .addStyleEntry('pieceCss', './assets/css/piece/piece.css')
+    .addStyleEntry('canvasCss', './assets/css/canvas/canvas.css')
+
+    .addEntry('navJs', './assets/js/nav.js')
+    .addEntry('barJs', './assets/js/home/bar.js')
+    .addEntry('canvasJs', './assets/js/canvas/canvasMain.js')
+    .addEntry('tapisJs', './assets/js/tapis/tapisMain.js')
+    .autoProvidejQuery()
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 
