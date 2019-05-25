@@ -5,7 +5,9 @@ import SaveManipulator from'./SaveManipulator.class.js';
 import * as util from "./util.js";
 import Tapis from './Tapis.class.js';
 import Ore from './Ore.class.js';
+import Position from './Position.class.js';
 
+// // BUG: same id for tapis and ore
 export default class Manipulator {
   constructor(
     listeClass, grille) {
@@ -25,7 +27,7 @@ export default class Manipulator {
     for (var i = 0; i < this.listeClass.length; i++) {
       var className = this.listeClass[i].getClassName();
       console.log(className);
-      $("#selector").append(("<button type='button' class='selectorItem'>" + className + "</button>"));
+      $("#selector").append(("<button  class='selectorItem' type='button' >" + className + "</button>"));
     }
   }
   changeSelector(selected) {
@@ -413,7 +415,7 @@ export default class Manipulator {
     if (object != null) {
       var queryObject = $("#object-" + object.getId())
       console.log(queryObject.attr('transform'));
-      var actualDegree = findDigit(queryObject.attr('transform'))
+      var actualDegree = util.findDigit(queryObject.attr('transform'))
       var newDegree = (parseInt(actualDegree) + 90) % 360;
       queryObject.attr('transform', 'rotate(' + newDegree + ')');
       object.pos.direction = (object.pos.direction + 1) % 4

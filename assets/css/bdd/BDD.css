@@ -1,0 +1,38 @@
+table {
+  margin: 5px auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+.before,.after,.actual,.start{
+  font-size: 2rem;
+  margin: 0 5px;
+  padding: 0 15px;
+  border-radius: 10px;
+}
+.start,.before,.after{
+  color: black;
+}
+.start:hover,.before:hover,.after:hover{
+  background: red;
+  color: white;
+}
+th {
+  background: grey;
+  border: 1px black solid;
+}
+
+td {
+  border: 1px black solid;
+  padding: 0 10px;
+}
+
+tr:nth-child(odd) {
+  background: white;
+}
+
+tr:nth-child(even) {
+  background: lightgrey;
+}
+#rechercheBar{
+  margin: 2% 0;
+}

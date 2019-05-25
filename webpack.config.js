@@ -26,6 +26,7 @@ Encore
     .addStyleEntry('barCss', './assets/css/home/bar.css')
     .addStyleEntry('pieceCss', './assets/css/piece/piece.css')
     .addStyleEntry('canvasCss', './assets/css/canvas/canvas.css')
+    .addStyleEntry('bddCss', './assets/css/bdd/BDD.css')
 
     .addEntry('navJs', './assets/js/nav.js')
     .addEntry('barJs', './assets/js/home/bar.js')

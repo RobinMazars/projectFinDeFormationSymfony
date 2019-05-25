@@ -21,9 +21,6 @@ object {
   flex-direction: column;
   justify-content: space-around;
 }
-.selectorItem {
-  padding: 15%;
-}
 #selector > .selected {
   background-color: red;
 }

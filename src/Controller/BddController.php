@@ -3,6 +3,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Utils\Chercheur;
 class BddController extends AbstractController
 {
     /**
@@ -11,6 +12,8 @@ class BddController extends AbstractController
     public function bdd()
     {
       $nbrPage=5;
+
+
       if (isset($_GET['page'])) {
         $page=(int)htmlspecialchars($_GET['page']);
         $offset=($page-1)*$nbrPage;
@@ -25,11 +28,14 @@ class BddController extends AbstractController
       }
       if (isset($_POST['recherche'])) {
         $recherche=$_POST['recherche'] ;// TODO: escape
+
         return $this->render('bdd/BddResearch.html.twig');
         $PaginationEnable = false;
       }
       else {
-        return $this->render('bdd/bdd.html.twig',['nbrPage'=>$nbrPage]);
+        $chercheur=new Chercheur();
+        $recherche=$chercheur->getInfoTable($nbrPage,$offset);
+        return $this->render('bdd/bdd.html.twig',['nbrPage'=>$nbrPage,'info'=>$recherche['info'],'allProduct'=>$recherche['allProduct']]);
         $PaginationEnable = true;
       }
     }
