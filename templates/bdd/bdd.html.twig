@@ -1,10 +1,12 @@
 {% extends 'layout.html.twig' %}
+{% set previousPage = pages['previousPage'] %}
+{% set nextPage = pages['nextPage'] %}
 {% set pagination %}
 <nav class="pagination">
-  <a class="start" href="{{path('bdd')}}?page=1">Debut</a>
-  <a class="before" href="{{path('bdd')}}?page={{pages['previousPage']}}"><</a>
+  <a class="start" href="{{path(namePath,  {'actualPage':1})}}">Debut</a>
+  <a class="before" href="{{path(namePath,  {'actualPage':previousPage})}}"><</a>
   <span class="actual">{{pages['actualPage']}}</span>
-  <a class="after" href="{{path('bdd')}}?page={{pages['nextPage']}}">></a>
+  <a class="after" href="{{path(namePath,  {'actualPage':nextPage})}}">></a>
 </nav>
 {% endset %}
 {% block title %}BDD{% endblock %}
@@ -13,21 +15,29 @@
   {{encore_entry_link_tags('bddCss')}}
 {% endblock %}
 {% block content %}
-  {{nbrPage}}
   {% if recherche is defined %}
     {{recherche}}
   {% endif %}
 
   <section>
     <h2>Tableaux</h2>
-    <form id="rechercheBar" action="{{path('bdd')}}" method="post">
+    <form id="rechercheBar" action="{{path('search',  {'actualPage':1})}}" method="get">
       <label for="recherche">Rechercher un produit:
       </label>
-      <input type="text" name="recherche" value="" required="required">
-      <input type="submit" name="submitRecherche" value="Enter">
+      {% if recherche is defined %}
+      <input type="text" name="recherche" value="{{recherche}}" autofocus onfocus="this.setSelectionRange(this.value.length,this.value.length);" required="required">
+      {% else %}
+        <input type="text" name="recherche" value="" autofocus required="required">
+      {% endif %}
+
+
+      <input type="submit"  value="Enter">
     </form>
     {% if allProduct %}
+    {% if recherche is defined %}
+    {% else %}
       {{pagination}}
+    {% endif %}
       <table>
         <th>Nom du produit</th>
         <th>Nom du fourniseur</th>
@@ -42,13 +52,16 @@
                 <td>{{value2}}</td>
               {% endfor %}
             </tr>
-          </tbody>
         {% endfor %}
+        </tbody>
       </table>
     {% else %}
       <p>Pas de produit trouvé</p>
     {% endif %}
-    {{pagination}}
+    {% if recherche is defined %}
+    {% else %}
+      {{pagination}}
+    {% endif %}
     {% if info is defined %}
       <section>
         <h2>Informations suplémentaires</h2>

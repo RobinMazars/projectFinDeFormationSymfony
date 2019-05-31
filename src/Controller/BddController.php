@@ -6,45 +6,53 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Utils\Chercheur;
 class BddController extends AbstractController
 {
+
     /**
-     * @Route("/Bdd", name="bdd", methods={"GET","POST"})
+     * @Route("/Bdd/{actualPage}",defaults={"actualPage"=1},name="bdd", methods={"GET"})
+     *
      */
-    public function bdd()
+    public function bdd($actualPage)
     {
-      $nbrPage=10;
+      $pages=$this->calcPagination($actualPage);
 
+      $chercheur=new Chercheur();
+      $recherche=$chercheur->getInfoTable($pages['nbrItemByPage'],$pages['offset']);
+      return $this->render('bdd/bdd.html.twig',['pages'=>$pages,
+                                                'info'=>$recherche['info'],
+                                                'allProduct'=>$recherche['allProduct'],
+                                                'namePath'=>__FUNCTION__]);
+    }
 
-      if (isset($_GET['page'])) {
-        $actualPage=(int)htmlspecialchars($_GET['page']);
-        if ($actualPage>1) {
-            $previousPage=$actualPage-1;
-        }
-        else {
-          $previousPage=1;
-        }
-        $nextPage=$actualPage+1;
-        $offset=($actualPage-1)*$nbrPage;
+    /**
+     * @Route("/Bdd/search/{actualPage<\d+>}", name="search", methods={"GET"})
+     */
+    public function search($actualPage){
+      $pages=$this->calcPagination(intval($actualPage));
+      $recherche=htmlspecialchars($_GET['recherche']) ;// TODO: escape
+      $chercheur=new Chercheur();
+      $nbrItemByPageOverdrive=50;
+      $result=$chercheur->getResearch($nbrItemByPageOverdrive,$pages['offset'],$recherche);
+      return $this->render('bdd/bdd.html.twig',['pages'=>$pages,
+                                                'allProduct'=>$result['allProduct'],
+                                                'recherche'=>$recherche,
+                                                'namePath'=>__FUNCTION__]);
+
+    }
+    public function calcPagination($actualPage){
+      $nbrItemByPage=10;
+      if ($actualPage>1) {
+          $previousPage=$actualPage-1;
       }
       else {
-        $actualPage=1;
         $previousPage=1;
-        $nextPage=2;
-        $offset=0;
-        //// TODO: redirection vers ?page=0 a faire dans le controller
       }
-      $pages=array("actualPage"=>$actualPage,"previousPage"=>$previousPage,"nextPage"=>$nextPage);
-      if (isset($_POST['recherche'])) {
-        $recherche=$_POST['recherche'] ;// TODO: escape
-        $chercheur=new Chercheur();
-        $result=$chercheur->getResearch($nbrPage,$offset,$recherche);
-        return $this->render('bdd/bdd.html.twig',['nbrPage'=>$nbrPage+654,'allProduct'=>$result['allProduct'],'recherche'=>$recherche]);
-        // $PaginationEnable = false;
-      }
-      else {
-        $chercheur=new Chercheur();
-        $recherche=$chercheur->getInfoTable($nbrPage,$offset);
-        return $this->render('bdd/bdd.html.twig',['nbrPage'=>$nbrPage,'pages'=>$pages,'info'=>$recherche['info'],'allProduct'=>$recherche['allProduct']]);
-        // $PaginationEnable = true;
-      }
+      $nextPage=$actualPage+1;
+      $offset=($actualPage-1)*$nbrItemByPage;
+      $pages=array("actualPage"=>$actualPage,
+                   "previousPage"=>$previousPage,
+                   "nextPage"=>$nextPage,
+                   "nbrItemByPage"=>$nbrItemByPage,
+                    "offset"=>$offset);
+      return $pages;
     }
 }
