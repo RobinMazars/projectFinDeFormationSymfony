@@ -19,6 +19,13 @@ class Chercheur
     $info["AVG(`buyPrice`)"]=round($info["AVG(`buyPrice`)"],2);
     return array('allProduct' => $allProduct,'info' => $info);
   }
+  public function getResearch($nbrPage,$offset,string $recherche){
+    $sql="SELECT `productName`,`productVendor`,`productScale`,`productDescription`,`quantityInStock`,`buyPrice`
+    FROM `products` WHERE `productName` LIKE ? LIMIT ".$nbrPage." OFFSET ".$offset." ";
+    $allProduct=$this->_bdd->retrieveDataWithParam($sql,["%".$recherche."%"]);
+    return array('allProduct' => $allProduct);
+
+  }
 }
 
 

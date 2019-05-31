@@ -30,7 +30,16 @@ class Bdd
         if (count($result)==0) {
           $result=false;
         }
-
+        return $result;
+    }
+    public function retrieveDataWithParam(string $sql,array $recherche=array())
+    {
+        $data=$this->_db->prepare($sql);
+        $data->execute($recherche);
+        $result= $data->fetchAll();
+        if (count($result)==0) {
+          $result=false;
+        }
         return $result;
     }
 }
