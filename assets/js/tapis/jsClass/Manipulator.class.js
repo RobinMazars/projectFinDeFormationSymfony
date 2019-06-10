@@ -415,9 +415,10 @@ export default class Manipulator {
     if (object != null) {
       var queryObject = $("#object-" + object.getId())
       console.log(queryObject.attr('transform'));
-      var actualDegree = util.findDigit(queryObject.attr('transform'))
+      var actualDegree = object.pos.direction * 90
+      console.log("actualDegree :"+actualDegree);
       var newDegree = (parseInt(actualDegree) + 90) % 360;
-      queryObject.attr('transform', 'rotate(' + newDegree + ')');
+      queryObject.attr('transform', 'rotate(' + newDegree +" "+object.originX+" "+object.originY+ ')');
       object.pos.direction = (object.pos.direction + 1) % 4
       util.refresh('#figureGrp')
 

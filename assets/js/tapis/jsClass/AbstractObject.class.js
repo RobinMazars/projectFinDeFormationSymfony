@@ -41,7 +41,10 @@ export default class AbstractObject {
 
     //console.log(origin.string);
     var angle = 90 * this.pos.direction;
-    this.svg = '<rect id="object-' + this.getId() + '" width=' + width + ' height=' + height + ' x=' + this.pos.x + '  y=' + this.pos.y + ' fill="url(#' + idDef + ')"  transform-origin="' + origin.string + '" transform="rotate(' + angle + ')"/>'
+    var originRotation = this.getBottomLeft(width,height);
+    this.originX= parseInt(this.pos.x)+(width/2);
+    this.originY= parseInt(this.pos.y)+(height/2);
+    this.svg = '<rect id="object-' + this.getId() + '" width=' + width + ' height=' + height + ' x=' + this.pos.x + '  y=' + this.pos.y + ' fill="url(#' + idDef + ')" transform="rotate(' + angle +" "+ this.originX +" " + this.originY + ')"/>'
   }
   getCenter(width, height) {
     var center = {}
@@ -72,4 +75,8 @@ export default class AbstractObject {
   getId() {
     return this.id;
   }
+  getPosition(){
+    return rhs.pos;
+  }
+
 }
