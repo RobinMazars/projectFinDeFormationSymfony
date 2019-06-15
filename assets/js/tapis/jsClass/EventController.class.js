@@ -5,6 +5,7 @@ export default class EventController {
     console.log('eventController constructor');
     this.manipulator = manipulator
     this.saver = saver
+    this.actualPosMouse = null
     this.init()
     this.initSelector()
     this.bindOnCLick()
@@ -178,6 +179,12 @@ export default class EventController {
     self = this
     $('#frame').hover(function(e) {
       $(this).mousemove(function(event2) {
+        var posMouse = self.getPosMouse(event2);
+        var pos = self.manipulator.calcPos(posMouse)
+        if (self.actualPosMouse == null || !pos.isEqual(self.actualPosMouse)) {
+          self.actualPosMouse = pos;
+          self.manipulator.placeObject(self.manipulator.selected, self.actualPosMouse,null,true)
+        }
         $(document).unbind('keypress')
         $(document).keypress(function(e) {
           var touche = String.fromCharCode(e.which);
@@ -196,6 +203,7 @@ export default class EventController {
           }
         });
       });
+
       $('h1').css('background', 'violet');
     }, function() {
       $(document).unbind('mousemove')

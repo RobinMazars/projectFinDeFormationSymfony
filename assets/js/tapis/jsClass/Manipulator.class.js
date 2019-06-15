@@ -45,8 +45,10 @@ export default class Manipulator {
     $("#svg").append(group);
     var subGroup1 = $("<g id='figureGrpDown'></g>")
     var subGroup2 = $("<g id='figureGrpUp'></g>")
+    var subGroup3 = $("<g id='figureGrpGhost'></g>")
     group.append(subGroup1)
     group.append(subGroup2)
+    group.append(subGroup3)
     $("#svg").append(group);
     var group = $("<g id='animationGrp'></g>")
     $("#svg").append(group);
@@ -80,7 +82,14 @@ export default class Manipulator {
     var pos = new Position(x.toString(), y.toString(), direction);
     return pos;
   }
-  placeObject(classes, pos,type=null) {
+  placeGhost(object){
+    $("#figureGrpGhost").empty()
+    var svg = object.getSvg();
+    var id = object.getId();
+    $("#figureGrpGhost").append(svg);
+    $("#object-"+id).attr('fill-opacity','0.5');
+  }
+  placeObject(classes, pos,type=null,ghost=false) {
     var objectOnPlace = this.findAllObject(pos)
     if (objectOnPlace.length == 0) {
       if (type!=null && classes.getClassName()=='Tapis') {
@@ -90,10 +99,19 @@ export default class Manipulator {
         var object = new classes(pos)
       }
       //console.log(object);
-      this.addObject(object)
-      this.writeObject(object)
-      util.refresh("#figureGrp")
-    } else {
+      if (ghost==true) {
+
+        this.placeGhost(object);
+      }
+      else {
+      this.addObject(object);
+      this.writeObject(object);
+      }
+      util.refresh("#figureGrp");
+
+
+    }
+      else {
       var already = false;
       for (var i = 0; i < objectOnPlace.length; i++) {
         var object = this.listeObject[objectOnPlace[i]]

@@ -4,4 +4,13 @@ export default class Position {
     this.y=y;
     this.direction=direction;
   }
+  isEqual(pos){
+    if (this.x == pos.x && this.y == pos.y ) {
+      return true
+    }
+    else {
+      return false
+    }
+
+  }
 }
