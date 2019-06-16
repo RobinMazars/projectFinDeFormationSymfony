@@ -100,34 +100,36 @@ export default class Manipulator {
       }
       //console.log(object);
       if (ghost==true) {
-
+        console.log("object :"+object.getId());
         this.placeGhost(object);
       }
       else {
       this.addObject(object);
       this.writeObject(object);
       }
-      util.refresh("#figureGrp");
-
-
     }
-      else {
+      else if (ghost==false){
       var already = false;
       for (var i = 0; i < objectOnPlace.length; i++) {
         var object = this.listeObject[objectOnPlace[i]]
         if (object.getClass().getClassName() == classes.getClassName()) {
           //console.log(object.getClass().getClassName(),classes.getClassName());
-          already = true
+          already = true;
         }
       }
-      if (!already) {
-        var object = new classes(pos)
+      if (!already && ghost==false) {
+        if (type!=null && classes.getClassName()=='Tapis') {
+          var object = new classes(pos,type)
+        }
+        else {
+          var object = new classes(pos)
+        }
         //console.log(object);
         this.addObject(object)
         this.writeObject(object)
-        util.refresh("#figureGrp")
       }
     }
+    util.refresh("#figureGrp")
   }
   writeObject(object) {
     var classe = object.getClass().getClassName()

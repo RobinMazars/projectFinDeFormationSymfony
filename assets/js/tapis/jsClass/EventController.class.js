@@ -183,6 +183,7 @@ export default class EventController {
         var pos = self.manipulator.calcPos(posMouse)
         if (self.actualPosMouse == null || !pos.isEqual(self.actualPosMouse)) {
           self.actualPosMouse = pos;
+          // console.log("changement case");
           self.manipulator.placeObject(self.manipulator.selected, self.actualPosMouse,null,true)
         }
         $(document).unbind('keypress')

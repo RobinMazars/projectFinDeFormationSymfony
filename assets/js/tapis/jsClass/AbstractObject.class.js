@@ -73,7 +73,7 @@ export default class AbstractObject {
     return this.svg
   }
   getId() {
-    return this.id;
+    return this.getClassNameFromObject()+this.id;
   }
   getPosition(){
     return rhs.pos;
