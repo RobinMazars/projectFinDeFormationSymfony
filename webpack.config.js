@@ -23,7 +23,7 @@ Encore
     .addStyleEntry('masterCss', './assets/css/master.css')
     .addStyleEntry('normalizeCss', './assets/css/normalize.css')
     .addStyleEntry('tapisCss', './assets/css/Tapis/tapis.css')
-    .addStyleEntry('barCss', './assets/css/home/bar.css')
+    .addStyleEntry('barCss', './assets/css/home/home.css')
     .addStyleEntry('pieceCss', './assets/css/piece/piece.css')
     .addStyleEntry('canvasCss', './assets/css/canvas/canvas.css')
     .addStyleEntry('bddCss', './assets/css/bdd/BDD.css')

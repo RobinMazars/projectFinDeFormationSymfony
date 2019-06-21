@@ -1,4 +1,4 @@
-// out: bar.css, sourcemap: true
+// out: home.css, sourcemap: true
 
 
 @heightBar:20px;
@@ -41,4 +41,31 @@
 .bar:nth-of-type(even) .effectBar.textBar:before {
   border-left: @heightBar solid @colorBarOdd;
 }
-/*# sourceMappingURL=bar.css.map */
+#lienRealisation{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#lienRealisation a{
+  padding: 0.8%;
+  margin: 0.5%;
+  background-color: steelblue;
+  color: @colorBackground;
+  border-radius: 10px;
+  text-decoration: none;
+}
+#lienRealisation a:hover{
+    background-color: red;
+    color: black;  
+  }
+#lienRealisation a:active{
+    background-color: green;
+  }
+@media (min-width: 780px) {
+  #lienRealisation{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+}
+/*# sourceMappingURL=home.css.map */

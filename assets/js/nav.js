@@ -7,14 +7,14 @@ $(".sousMenusListe").width(function () {
   var paddingParentLeft=parseInt(parent.css('padding-left'));
   var paddingParentRight=parseInt(parent.css('padding-right'));
   var positionParentLeft=parent.offset();
-  $(this).width(parent.width()-paddingParentRight-paddingParentLeft)
+  $(this).width(parent.width())
+  // $(this).offset(positionParentLeft)
+
 })
 //bind event/////////////////////
 $("nav ul li").hover(function() {
-  if ($(window).width() > 780) {
     $(this).css('background', 'red');
     $(this).children().css('color', 'white');
-  }
 }, function() {
   $(this).css('background', '');
   $(this).children().css('color', '');

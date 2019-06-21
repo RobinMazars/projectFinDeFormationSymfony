@@ -36,13 +36,13 @@ nav ul {
 }
 nav ul li {
   font-size: 1.5rem;
-  padding: 0 5px;
+  padding: 5px;
   border-radius: 10px;
 }
 nav ul li a {
   color: black;
   text-decoration: none;
-  padding: 0 5px;
+  padding: 10px 5px;
   border-radius: 10px;
 }
 .sousMenusListe {
@@ -53,6 +53,7 @@ nav ul li a {
   padding-left: 0;
 }
 .sousMenusListe li {
+  padding: 2px 0px;
   border-radius: 0;
   background-color: blue;
   border: 1px solid black;
@@ -84,10 +85,6 @@ section {
   border-radius: 10px;
   background-color: white;
 }
-#lienRealisation {
-  display: flex;
-  flex-direction: column;
-}
 footer {
   background: #f5f6f6;
   /* Old browsers */
@@ -105,10 +102,6 @@ footer {
 @media (min-width: 780px) {
   nav ul {
     display: flex;
-    justify-content: space-around;
-  }
-  #lienRealisation {
-    flex-direction: row;
     justify-content: space-around;
   }
 }
