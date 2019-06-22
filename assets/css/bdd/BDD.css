@@ -3,21 +3,38 @@ table {
   border-collapse: collapse;
   text-align: center;
 }
-.before,.after,.actual,.start{
+
+.pagination {
+  padding: 5px 0px;
+}
+
+.before, .after, .actual, .start {
   font-size: 2rem;
   margin: 0 5px;
   padding: 0 15px;
   border-radius: 10px;
+  text-decoration: none;
 }
-.start,.before,.after{
-  color: black;
-}
-.start:hover,.before:hover,.after:hover{
-  background-color: firebrick;
+
+.start, .before, .after {
+  background-color: steelblue;
   color: white;
 }
+input[type="submit"]{
+  background-color: steelblue;
+  color: white;
+  border-radius :5px;
+  border: 0px;
+  padding: 5px;
+}
+.start:active, .before:active, .after:active {
+  background-color: green;
+}
+
 th {
   background: grey;
+  color: white;
+  font-weight: normal;
   border: 1px black solid;
 }
 
@@ -33,9 +50,12 @@ tr:nth-child(odd) {
 tr:nth-child(even) {
   background-color: lightgrey;
 }
-tr:hover{
-  background-color: firebrick;
+
+tbody tr:hover {
+  background-color: steelblue;
+  color: white;
 }
-#rechercheBar{
+
+#rechercheBar {
   margin: 2% 0;
 }

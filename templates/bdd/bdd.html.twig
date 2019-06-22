@@ -3,10 +3,8 @@
 {% set nextPage = pages['nextPage'] %}
 {% set pagination %}
 <nav class="pagination">
-  <a class="start" href="{{path(namePath,  {'actualPage':1})}}">Debut</a>
-  <a class="before" href="{{path(namePath,  {'actualPage':previousPage})}}"><</a>
-  <span class="actual">{{pages['actualPage']}}</span>
-  <a class="after" href="{{path(namePath,  {'actualPage':nextPage})}}">></a>
+  <a class="start" href="{{path(namePath,  {'actualPage':1})}}">Début</a>
+  <a class="before" href="{{path(namePath,  {'actualPage':previousPage})}}"><</a> <span class="actual">{{pages['actualPage']}}</span> <a class="after" href="{{path(namePath, {'actualPage':nextPage})}}">></a>
 </nav>
 {% endset %}
 {% block title %}BDD{% endblock %}
@@ -25,26 +23,28 @@
       <label for="recherche">Rechercher un produit:
       </label>
       {% if recherche is defined %}
-      <input type="text" name="recherche" value="{{recherche}}" autofocus onfocus="this.setSelectionRange(this.value.length,this.value.length);" required="required">
+        <input type="text" name="recherche" value="{{recherche}}" autofocus="autofocus" onfocus="this.setSelectionRange(this.value.length,this.value.length);" required="required">
       {% else %}
-        <input type="text" name="recherche" value="" autofocus required="required">
+        <input type="text" name="recherche" value="" autofocus="autofocus" required="required">
       {% endif %}
 
-
-      <input type="submit"  value="Enter">
+      <input type="submit" value="Enter">
     </form>
     {% if allProduct %}
-    {% if recherche is defined %}
-    {% else %}
-      {{pagination}}
-    {% endif %}
+      {% if recherche is defined %}
+        <a href="{{path('bdd')}}">Reset Formulaire</a>
+      {% else %}
+        {{pagination}}
+      {% endif %}
       <table>
-        <th>Nom du produit</th>
-        <th>Nom du fourniseur</th>
-        <th>Echelle</th>
-        <th>Description</th>
-        <th>Nombre en stock</th>
-        <th>Prix</th>
+        <thead>
+          <th>Nom du produit</th>
+          <th>Nom du fourniseur</th>
+          <th>Echelle</th>
+          <th>Description</th>
+          <th>Nombre en stock</th>
+          <th>Prix</th>
+        </thead>
         <tbody>
           {% for key, value in allProduct %}
             <tr>
@@ -52,7 +52,7 @@
                 <td>{{value2}}</td>
               {% endfor %}
             </tr>
-        {% endfor %}
+          {% endfor %}
         </tbody>
       </table>
     {% else %}
@@ -84,6 +84,6 @@
       Explication
     </section>
   {% endblock %}
-{% block bottomLink %}
-{{parent()}}
-{% endblock %}
+  {% block bottomLink %}
+    {{parent()}}
+  {% endblock %}

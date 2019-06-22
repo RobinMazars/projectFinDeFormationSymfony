@@ -13,7 +13,7 @@ $(".sousMenusListe").width(function () {
 })
 //bind event/////////////////////
 $("nav ul li").hover(function() {
-    $(this).css('background', 'red');
+    $(this).css('background', '#606060');
     $(this).children().css('color', 'white');
 }, function() {
   $(this).css('background', '');

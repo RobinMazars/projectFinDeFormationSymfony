@@ -1,3 +1,7 @@
+button{
+  border-radius: 4px;
+
+}
 #sousSection {
   display: flex;
   flex-direction: row;
@@ -20,12 +24,14 @@ object {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
+  }
 #selector .selectorItem {
   padding: 15px;
 }
 #selector > .selected {
-  background-color: firebrick;
+  background-color: steelblue;
+  color: white;
+
 }
 #loadSave {
   display: flex;
@@ -43,6 +49,11 @@ object {
 .saveLoad-Buttons * {
   margin: 2%;
 }
+.load:not(.notSave),
+.supre:not(.notSave),.save.empty{
+  background-color: steelblue;
+  color: white;
+}
 .load.notSave,
 .supre.notSave {
   filter: opacity(0.5);
@@ -55,5 +66,12 @@ object {
 }
 #animationButton {
   margin: 5px;
+}
+#animationButton > * {
+  background-color: steelblue;
+  color: white;
+}
+#animationButton > *:hover {
+  background-color: firebrick;
 }
 /*# sourceMappingURL=Tapis.css.map */
