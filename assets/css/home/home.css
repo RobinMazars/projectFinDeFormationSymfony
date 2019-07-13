@@ -1,3 +1,11 @@
+#mainTitle{
+  padding: 1% 2%;
+  background-color: white;
+  width: 50%;
+}
+h1{
+  font-size: 35px;
+}
 .bar {
   width: 90%;
   margin: auto;
@@ -31,18 +39,21 @@
 .bar:nth-of-type(even) .effectBar.textBar:before {
   border-left: 20px solid red;
 }
+.fab{
+  font-size:25px;
+}
 #lienRealisation {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 #lienRealisation a {
-  padding: 0.8%;
+  padding: 0.8% 4%;
   margin: 0.5%;
   background-color: steelblue;
-  color: lightgrey;
+  color: white;
   border-radius: 10px;
   text-decoration: none;
+  font-size: 25px;
 }
 #lienRealisation a:hover {
   background-color: red;
