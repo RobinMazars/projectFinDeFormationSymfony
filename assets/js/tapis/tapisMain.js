@@ -34,18 +34,5 @@ $(function(){
   var dom = new DomController()
   var listeClass = [Tapis, Ore];
   var manipulator = new Manipulator(listeClass);
-  // var pos1 = new Position(0, 0, 0);
-  // var pos2 = new Position(100, 100, 1);
-  // var pos3 = new Position(150, 150, 0);
-  // var pos5 = new Position(150, 150, 0);
-  // var pos4 = new Position(450, 450);
-  // var h = new Tapis(pos1);
-  // var h2 = new Tapis(pos2,'left');
-  // var h3 = new Ore(pos5);
-  // var h4 = new Tapis(pos3, 'right');
-  // manipulator.addObject(h);
-  // manipulator.addObject(h2);
-  // manipulator.addObject(h3);
-  // manipulator.addObject(h4);
   manipulator.writeAll();
 });

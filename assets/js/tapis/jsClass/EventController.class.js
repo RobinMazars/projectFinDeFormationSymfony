@@ -204,8 +204,6 @@ export default class EventController {
           }
         });
       });
-
-      $('h1').css('background', 'violet');
     }, function() {
       $(document).unbind('mousemove')
       $(document).unbind('keypress')
