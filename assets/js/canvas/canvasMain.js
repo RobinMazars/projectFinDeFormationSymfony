@@ -2,7 +2,7 @@
 import Canvas from "./jsClass/canvas.class.js"
 var canvas = new Canvas();
 //initBind
-$("#canvas").css('background', 'red');
+$("#canvas").css('background', 'steelblue');
 $("#canvas").mousedown(function(event) {
   mouseDown(event);
 });

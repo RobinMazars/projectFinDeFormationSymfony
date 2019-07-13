@@ -3,7 +3,7 @@ import Tapis from './jsClass/Tapis.class.js';
 import Ore from './jsClass/Ore.class.js';
 import Manipulator from './jsClass/Manipulator.class.js';
 import Position from './jsClass/Position.class.js';
-
+// BUG: ghost ddont remve after pose
 
 $(".sousMenusListe").hide()
 $(".sousMenusListe").find(':first-child').css('border-radius', '10px 10px 0 0');

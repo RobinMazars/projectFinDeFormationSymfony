@@ -3,7 +3,7 @@
   margin: 1% auto;
   height: 500px;
   width: 500px;
-  border: 1px red solid;
+  border: 8px steelblue double;
   padding: 0;
 }
 @keyframes rotate {

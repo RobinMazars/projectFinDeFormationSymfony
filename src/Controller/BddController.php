@@ -13,6 +13,7 @@ class BddController extends AbstractController
      */
     public function bdd($actualPage)
     {
+      // affiche la page bdd.html.twig de base
       $pages=$this->calcPagination($actualPage);
 
       $chercheur=new Chercheur();
@@ -27,6 +28,7 @@ class BddController extends AbstractController
      * @Route("/Bdd/search/{actualPage<\d+>}", name="search", methods={"GET"})
      */
     public function search($actualPage){
+      // affiche la page bdd.html.twig en après une recherche dans la base
       $pages=$this->calcPagination(intval($actualPage));
       $recherche=htmlspecialchars($_GET['recherche']) ;// TODO: escape
       $chercheur=new Chercheur();
@@ -39,6 +41,7 @@ class BddController extends AbstractController
 
     }
     public function calcPagination($actualPage){
+      // function pour calculer crées la pagination
       $nbrItemByPage=10;
       if ($actualPage>1) {
           $previousPage=$actualPage-1;

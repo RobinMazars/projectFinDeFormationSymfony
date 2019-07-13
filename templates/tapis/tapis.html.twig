@@ -9,7 +9,14 @@
 {% endblock %}
 {% block content %}
 <section>
-  <h1>Exemple en JavaScript : TAPIS </h1>
+  <h1>Exemple en JavaScript : Tapis </h1>
+  <section>
+    <ul id="regle">
+      <li>Cliquez pour ajouter un element</li>
+      <li>Souris sur un object + T pour changer son orientation</li>
+      <li>Souris sur un object + R pour tourner</li>
+    </ul>
+  </section>
   <section id="containerSvg">
     <div id="sousSection">
       <div id="containerFrameControl">
@@ -18,8 +25,8 @@
           </svg>
         </div>
         <div id="animationButton">
-          <button type="button" id="start" >Start <i class="fas fa-play"></i></button>
-          <button type="button" id="oneStep" >One Step <i class="fas fa-step-forward"></i></button>
+          <button type="button" id="start" >Play <i class="fas fa-play"></i></button>
+          <button type="button" id="oneStep" >Un Pas <i class="fas fa-step-forward"></i></button>
           <button type="button"  id="stop" >Stop <i class="fas fa-pause"></i></button>
           <button type="button"  id="clearSvg" >Clear All <i class="fas fa-trash-alt"></i></button>
         </div>
@@ -28,12 +35,6 @@
 </section>
 <section>
   Petit exemple en JavaScript qui consiste à transporter des minerais avec des tapis comme dans des usines
-</section>
-<section>
-  <p>-cliquez pour ajouter un element</p>
-<p>-souris sur un object + 't' pour changer son type</p>
-<p>-souris sur un object + 'r' pour rotate</p>
-
 </section>
 {% endblock %}
 {% block bottomLink %}

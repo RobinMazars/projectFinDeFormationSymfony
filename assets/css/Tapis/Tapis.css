@@ -7,6 +7,9 @@ button{
   flex-direction: row;
   justify-content: space-around;
 }
+#regle{
+  list-style: none;
+}
 #frame {
   margin: auto;
   width: 500px;
@@ -56,10 +59,10 @@ object {
 }
 .load.notSave,
 .supre.notSave {
-  filter: opacity(0.5);
+  filter: opacity(0.2);
 }
 .save:not(.empty) {
-  filter: opacity(0.5);
+  filter: opacity(0.2);
 }
 .supre:not(.notSave):hover {
   background-color: firebrick;
@@ -70,6 +73,7 @@ object {
 #animationButton > * {
   background-color: steelblue;
   color: white;
+  font-size: 1.5rem;
 }
 #animationButton > *:hover {
   background-color: firebrick;
