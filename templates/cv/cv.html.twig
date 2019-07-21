@@ -1,9 +1,63 @@
 {% extends 'layout.html.twig' %}
 {% block title %}CV{% endblock %}
-{% block content %}
-<section>
-mon Cv
-</section>
+{% block link %}
+  {{parent()}}
+  {{encore_entry_link_tags('cvCss')}}
 
+{% endblock %}
+{% block content %}
+  <section>
+    <a href="#">Telecharger CV</a>
+    <div id="cv">
+      <h3>Formation :</h3>
+      <ul>
+        <li>Fin 2018 (septembre/octobre/novembre) Formation 3WA de développeur/intégrateur web(lien) Titre RNCP de niveau III​, "Développeur - Intégrateur en réalisation d'Applications Web"</li>
+        <li>Février-Juillet 2019 Stage en entreprise à la DGAC dans le pôle eee sur la suite ELK (Elasticsearch Logstash Kibana).</li>
+      </ul>
+      <hr>
+      <h3>Parcours Universtaire:</h3>
+      <p>2012-2018 : Licence de Physique à L’Université Paul Sabatier à Toulouse</p>
+      <ul>
+        <li>Cours d’Informatique pour la Physique (MATLAB)</li>
+        <li>Projet de modélisation de système Physique (MATLAB)</li>
+        <li>Projet de création d’une bibliothèque de calcul élémentaire ( langage C )</li>
+        <li>Cours d’Anglais</li>
+      </ul>
+      <p>2012 : Obtention du Bac S avec mention assez bien</p>
+      <hr>
+      <h3>Expériences :</h3>
+      <p>2016 : Participation à la coupe de France de Robotique avec l’équipe INSA Toulouse</p>
+      <ul>
+        <li>Projet de 1 an,en équipe,pour la construction et la programmation d’un robot qui doit effectuer des tâches sur un plateau avec un robot adverse effectuant des actions similaires.</li>
+        <li>Langage Matlab et Simulink conçus avec l’interface LEGO.</li>
+      </ul>
+      <hr>
+      <h3>Compétences Informatique :</h3>
+      <ul>
+        <li>Front-End: -Langage : HTML/CSS/JavaScript</li>
+        <ul>
+          <li>Framework et Bibliothèques : Jquery/Bootstrap</li>
+        </ul>
+        <li>Back-End : -Langage : PHP/MySQL</li>
+        <ul>
+          <li>-Framework et Bibliothèques : Wordpress/Symfony</li>
+        </ul>
+        <li>Autre : Programmation orientée objet, Python, Elasticsearch</li>
+        <li>Apprentissage en autodidacte des langages C et Java (OpenClassrooms)</li>
+      </ul>
+      <hr>
+      <h3>Compétences Supplémentaires :</h3>
+      <p>Anglais lu,écrit,parlé.</p>
+      <hr>
+      <h3>Savoir être:</h3>
+      <ul>
+        <li>autonomie</li>
+        <li>pédagogie</li>
+        <li>travail d'équipe</li>
+        <li>force de proposition</li>
+        <li>curiosité</li>
+      </ul>
+    </div>
+  </section>
 
 {% endblock %}
