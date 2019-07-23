@@ -7,8 +7,8 @@ import Tapis from './Tapis.class.js';
 import Ore from './Ore.class.js';
 import Position from './Position.class.js';
 
-// // BUG: same id for tapis and ore
 export default class Manipulator {
+  // va manipuler les objects comme les tapis est les minerais
   constructor(
     listeClass, grille) {
     this.listeObject = [];

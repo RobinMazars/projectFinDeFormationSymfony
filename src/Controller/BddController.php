@@ -30,7 +30,7 @@ class BddController extends AbstractController
     public function search($actualPage){
       // affiche la page bdd.html.twig en après une recherche dans la base
       $pages=$this->calcPagination(intval($actualPage));
-      $recherche=htmlspecialchars($_GET['recherche']) ;// TODO: escape
+      $recherche=htmlspecialchars($_GET['recherche']);
       $chercheur=new Chercheur();
       $nbrItemByPageOverdrive=50;
       $result=$chercheur->getResearch($nbrItemByPageOverdrive,$pages['offset'],$recherche);
