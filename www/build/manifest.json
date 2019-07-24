@@ -1,0 +1,19 @@
+{
+  "my-project/www/build/barCss.css": "/my-project/www/build/barCss.css",
+  "my-project/www/build/barJs.js": "/my-project/www/build/barJs.js",
+  "my-project/www/build/bddCss.css": "/my-project/www/build/bddCss.css",
+  "my-project/www/build/canvasCss.css": "/my-project/www/build/canvasCss.css",
+  "my-project/www/build/canvasJs.js": "/my-project/www/build/canvasJs.js",
+  "my-project/www/build/cvCss.css": "/my-project/www/build/cvCss.css",
+  "my-project/www/build/masterCss.css": "/my-project/www/build/masterCss.css",
+  "my-project/www/build/navJs.js": "/my-project/www/build/navJs.js",
+  "my-project/www/build/normalizeCss.css": "/my-project/www/build/normalizeCss.css",
+  "my-project/www/build/pieceCss.css": "/my-project/www/build/pieceCss.css",
+  "my-project/www/build/runtime.js": "/my-project/www/build/runtime.js",
+  "my-project/www/build/tapisCss.css": "/my-project/www/build/tapisCss.css",
+  "my-project/www/build/tapisJs.js": "/my-project/www/build/tapisJs.js",
+  "my-project/www/build/vendors~barJs~canvasJs~navJs~tapisJs.js": "/my-project/www/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
+  "my-project/www/build/vendors~navJs~tapisJs.js": "/my-project/www/build/vendors~navJs~tapisJs.js",
+  "my-project/www/build/vendors~tapisJs.js": "/my-project/www/build/vendors~tapisJs.js",
+  "my-project/www/build/images/MaxPixel.freegreatpicture.com-Digital-Board-Interfaces-Circuits-Conductors-730793.jpg": "/my-project/www/build/images/MaxPixel.freegreatpicture.com-Digital-Board-Interfaces-Circuits-Conductors-730793.ca9b53c6.jpg"
+}

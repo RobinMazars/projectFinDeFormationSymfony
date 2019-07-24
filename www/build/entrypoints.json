@@ -1,0 +1,99 @@
+{
+  "entrypoints": {
+    "normalizeCss": {
+      "js": [
+        "/my-project/www/build/runtime.js"
+      ],
+      "css": [
+        "/my-project/www/build/normalizeCss.css"
+      ]
+    },
+    "barJs": {
+      "js": [
+        "/my-project/www/build/runtime.js",
+        "/my-project/www/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
+        "/my-project/www/build/barJs.js"
+      ]
+    },
+    "canvasJs": {
+      "js": [
+        "/my-project/www/build/runtime.js",
+        "/my-project/www/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
+        "/my-project/www/build/canvasJs.js"
+      ]
+    },
+    "tapisJs": {
+      "js": [
+        "/my-project/www/build/runtime.js",
+        "/my-project/www/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
+        "/my-project/www/build/vendors~navJs~tapisJs.js",
+        "/my-project/www/build/vendors~tapisJs.js",
+        "/my-project/www/build/tapisJs.js"
+      ]
+    },
+    "masterCss": {
+      "js": [
+        "/my-project/www/build/runtime.js"
+      ],
+      "css": [
+        "/my-project/www/build/masterCss.css"
+      ]
+    },
+    "navJs": {
+      "js": [
+        "/my-project/www/build/runtime.js",
+        "/my-project/www/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
+        "/my-project/www/build/vendors~navJs~tapisJs.js",
+        "/my-project/www/build/navJs.js"
+      ]
+    },
+    "tapisCss": {
+      "js": [
+        "/my-project/www/build/runtime.js"
+      ],
+      "css": [
+        "/my-project/www/build/tapisCss.css"
+      ]
+    },
+    "barCss": {
+      "js": [
+        "/my-project/www/build/runtime.js"
+      ],
+      "css": [
+        "/my-project/www/build/barCss.css"
+      ]
+    },
+    "pieceCss": {
+      "js": [
+        "/my-project/www/build/runtime.js"
+      ],
+      "css": [
+        "/my-project/www/build/pieceCss.css"
+      ]
+    },
+    "canvasCss": {
+      "js": [
+        "/my-project/www/build/runtime.js"
+      ],
+      "css": [
+        "/my-project/www/build/canvasCss.css"
+      ]
+    },
+    "bddCss": {
+      "js": [
+        "/my-project/www/build/runtime.js"
+      ],
+      "css": [
+        "/my-project/www/build/bddCss.css"
+      ]
+    },
+    "cvCss": {
+      "js": [
+        "/my-project/www/build/runtime.js"
+      ],
+      "css": [
+        "/my-project/www/build/cvCss.css"
+      ]
+    }
+  }
+}

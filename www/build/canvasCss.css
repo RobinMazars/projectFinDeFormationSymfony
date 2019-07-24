@@ -1,0 +1,10 @@
+button.selected{
+  background-color: green;
+}
+button ,input{
+  padding: 1%;
+  border-radius: 10px;
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vY2FudmFzLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHVCQUF1QjtBQUN6QjtBQUNBO0VBQ0UsV0FBVztFQUNYLG1CQUFtQjtBQUNyQiIsImZpbGUiOiJjYW52YXNDc3MuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYnV0dG9uLnNlbGVjdGVke1xyXG4gIGJhY2tncm91bmQtY29sb3I6IGdyZWVuO1xyXG59XHJcbmJ1dHRvbiAsaW5wdXR7XHJcbiAgcGFkZGluZzogMSU7XHJcbiAgYm9yZGVyLXJhZGl1czogMTBweDtcclxufVxyXG4iXSwic291cmNlUm9vdCI6IiJ9*/

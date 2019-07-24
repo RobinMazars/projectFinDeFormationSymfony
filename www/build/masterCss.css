@@ -1,0 +1,115 @@
+.primaryBackGroundColor {
+  background: #f5f6f6;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #f5f6f6 0%, #dbdce2 21%, #c4c7d3 50%, #dddfe3 80%, #f5f6f6 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #f5f6f6 0%, #dbdce2 21%, #c4c7d3 50%, #dddfe3 80%, #f5f6f6 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #f5f6f6 0%, #dbdce2 21%, #c4c7d3 50%, #dddfe3 80%, #f5f6f6 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f6f6', endColorstr='#f5f6f6', GradientType=1);
+  /* IE6-9 */
+}
+body {
+  width: 98%;
+  margin: auto;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  background-image: url(/my-project/www/build/images/MaxPixel.freegreatpicture.com-Digital-Board-Interfaces-Circuits-Conductors-730793.ca9b53c6.jpg);
+}
+header {
+  background: #f5f6f6;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #f5f6f6 0%, #dbdce2 21%, #c4c7d3 50%, #dddfe3 80%, #f5f6f6 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #f5f6f6 0%, #dbdce2 21%, #c4c7d3 50%, #dddfe3 80%, #f5f6f6 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #f5f6f6 0%, #dbdce2 21%, #c4c7d3 50%, #dddfe3 80%, #f5f6f6 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f6f6', endColorstr='#f5f6f6', GradientType=1);
+  /* IE6-9 */
+  border: 1px solid black;
+  border-radius: 0 0 10px 10px;
+}
+nav ul {
+  list-style: none;
+  padding: 0px;
+}
+nav ul li {
+  font-size: 1.5rem;
+  padding: 5px;
+  border-radius: 10px;
+}
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 5px;
+  border-radius: 10px;
+}
+.sousMenusListe {
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}
+.sousMenusListe li {
+  padding: 2px 0px;
+  border-radius: 0;
+  background-color: steelblue;
+  border: 1px solid black;
+  margin: 0;
+}
+.sousMenusListe li a {
+  color: white;
+}
+h2 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1rem;
+}
+section {
+  width: 90%;
+  margin: 15px auto;
+  padding: 5px ;
+  border: 1px solid black;
+  box-shadow: 0 0 15px;
+  border-radius: 10px;
+  background-color: white;
+}
+footer {
+  background: #f5f6f6;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #f5f6f6 0%, #dbdce2 21%, #c4c7d3 50%, #dddfe3 80%, #f5f6f6 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #f5f6f6 0%, #dbdce2 21%, #c4c7d3 50%, #dddfe3 80%, #f5f6f6 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #f5f6f6 0%, #dbdce2 21%, #c4c7d3 50%, #dddfe3 80%, #f5f6f6 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f6f6', endColorstr='#f5f6f6', GradientType=1);
+  /* IE6-9 */
+  border: 1px solid black;
+  border-radius: 10px 10px 0 0;
+}
+@media (min-width: 780px) {
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+  }
+  header nav {
+    flex: 6;
+  }
+  header img {
+    flex: 1;
+  }
+}
+/*# sourceMappingURL=master.css.map */
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vbWFzdGVyLmxlc3MiLCJ3ZWJwYWNrOi8vL21hc3Rlci5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQ0NBLGlCQUFpQjtFREFqQjtFQ0VBLGFBQWE7RUREYjtFQ0dBLDRCQUE0QjtFREY1QjtFQ0lBLHFEQUFxRDtFREhyRDtFQ0tBLFVBQVU7QUFDWjtBRENBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtBQ0NGO0FERUE7RUFuQkU7RUNvQkEsaUJBQWlCO0VEbkJqQjtFQ3FCQSxhQUFhO0VEcEJiO0VDc0JBLDRCQUE0QjtFRHJCNUI7RUN1QkEscURBQXFEO0VEdEJyRDtFQ3dCQSxVQUFVO0VEUFY7RUFDQTtBQ1NGO0FETkE7RUFFSTtFQUNBO0FDT0o7QURWQTtFQUtNO0VBQ0E7RUFDQTtBQ1FOO0FEZkE7RUFTUTtFQUNBO0VBQ0E7RUFDQTtBQ1NSO0FESkE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0FDTUY7QURYQTtFQU9JO0VBQ0E7RUFDQTtFQUNBO0VBRUE7QUNNSjtBRGxCQTtFQWVNO0FDTU47QURBQTtFQUNFO0FDRUY7QURBQTtFQUNFO0FDRUY7QURBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0FDRUY7QURDQTtFQS9FRTtFQ2lGQSxpQkFBaUI7RURoRmpCO0VDa0ZBLGFBQWE7RURqRmI7RUNtRkEsNEJBQTRCO0VEbEY1QjtFQ29GQSxxREFBcUQ7RURuRnJEO0VDcUZBLFVBQVU7RURSVjtFQUNBO0FDVUY7QUROQTtFQUtFO0lBRUk7SUFDQTtFQ0dKO0FBQ0Y7QURDQTtFQUtFO0lBQ0U7RUNIRjtFREVBO0lBR0k7RUNGSjtFRERBO0lBTUk7RUNGSjtBQUNGO0FBQ0EscUNBQXFDIiwiZmlsZSI6Im1hc3RlckNzcy5jc3MiLCJzb3VyY2VSb290IjoiIn0=*/

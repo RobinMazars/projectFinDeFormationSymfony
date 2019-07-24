@@ -3,9 +3,10 @@ var Encore = require('@symfony/webpack-encore');
 // or:  yarn encore dev --watch   for auto update
 Encore
     // directory where compiled assets will be stored
-    .setOutputPath('public/build/')
+    .setOutputPath('www/build/')
     // public path used by the web server to access the output path
-    .setPublicPath('/my-project/public/build')
+    .setPublicPath('/my-project/www/build')
+    // .setPublicPath('www/build')
     // .setPublicPath('https://code.jquery.com/jquery-3.4.1.js')
     // only needed for CDN's or sub-directory deploy
     // .setManifestKeyPrefix('build/')
