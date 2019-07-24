@@ -23,6 +23,7 @@ export default class Manipulator {
     //this.affListeObject()
   }
   addSelector() {
+    // ajoute les bouton à droite pour selectionner le type de figure à poser
     $("<div id='selector'> </div>").insertAfter("#containerFrameControl")
     for (var i = 0; i < this.listeClass.length; i++) {
       var className = this.listeClass[i].getClassName();
@@ -31,6 +32,7 @@ export default class Manipulator {
     }
   }
   changeSelector(selected) {
+    // change le bouton à droite qui est selectioner
     $('.selectorItem').removeClass('selected')
     $(selected).addClass('selected')
     for (var i = 0; i < this.listeClass.length; i++) {
@@ -41,6 +43,7 @@ export default class Manipulator {
     }
   }
   regroup() {
+    // créer les diferent group de figure au dessus/en dessous/fantome
     var group = $("<g id='figureGrp'></g>")
     $("#svg").append(group);
     var subGroup1 = $("<g id='figureGrpDown'></g>")
@@ -54,6 +57,7 @@ export default class Manipulator {
     $("#svg").append(group);
   }
   reset(listeObjectLoad) {
+    // enleve toute les figures
     $("#figureGrpUp").empty()
     $("#figureGrpDown").empty()
     this.listeObject = [];
@@ -132,6 +136,7 @@ export default class Manipulator {
     util.refresh("#figureGrp")
   }
   writeObject(object) {
+    // ajoute la figure dans le DOM
     var classe = object.getClass().getClassName()
     var svg = object.getSvg();
     if (classe == 'Tapis') {

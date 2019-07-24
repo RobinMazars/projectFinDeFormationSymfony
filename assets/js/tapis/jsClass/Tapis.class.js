@@ -2,6 +2,7 @@ console.log('class tapis load');
 import AbstractObject from'./AbstractObject.class.js';
 
 export default class Tapis extends AbstractObject {
+  // class pour les tapis
   constructor(pos,type='forward') {
     super(pos)
     this.type=type;

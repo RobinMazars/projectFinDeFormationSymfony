@@ -2,6 +2,7 @@ console.log('class ore load');
 import AbstractObject from'./AbstractObject.class.js';
 
 export default class Ore extends AbstractObject {
+  // class pour les minerais 
   constructor(pos) {
     super(pos)
     this.setSvg()

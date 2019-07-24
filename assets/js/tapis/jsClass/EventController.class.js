@@ -1,6 +1,7 @@
 console.log('class EventController load');
 
 export default class EventController {
+  // controlle les cliques souris et clavier
   constructor(manipulator,saver) {
     console.log('eventController constructor');
     this.manipulator = manipulator

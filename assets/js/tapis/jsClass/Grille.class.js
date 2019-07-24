@@ -1,6 +1,7 @@
 console.log('class Grille load');
 
 export default class Grille {
+  // créer la grille de jeu
   constructor(nbrCaseWidth='10',nbrCaseHeight="10") {
     this.width=$("#svg").width()
     this.height=$("#svg").height()

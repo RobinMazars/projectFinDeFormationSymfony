@@ -1,3 +1,4 @@
+// js pour faire le deroulement du menu déroulent
 //init
 $(".sousMenusListe").hide()
 $(".sousMenusListe").find(':first-child').css('border-radius', '10px 10px 0 0');

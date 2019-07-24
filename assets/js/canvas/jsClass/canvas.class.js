@@ -1,5 +1,6 @@
 import Pen from "./pen.class.js"
 export default class Canvas {
+  // class qui controlle dans quelle mode on se trouve et trace les traits
   constructor() {
     this.canvas = document.getElementById('canvas');
     this.ctx = this.canvas.getContext('2d');

@@ -1,14 +1,4 @@
-// $.getMultiScripts = function(arr, path) {
-//   var _arr = $.map(arr, function(scr) {
-//     return $.getScript((path || "") + scr);
-//   });
-//
-//   _arr.push($.Deferred(function(deferred) {
-//     $(deferred.resolve);
-//   }));
-//
-//   return $.when.apply($, _arr);
-// }
+// fichier pour les fonctions utilitaires
 console.log("util.js");
 
 export function refresh(element = "#frame") {

@@ -1,9 +1,10 @@
+// js pour la création des bar dans la page home 
 var listBar=$(".bar")
 for (var i = 0; i < listBar.length; i++) {
   var pourcentage=findPourcentage(listBar.eq(i).attr('class'));
   console.log(pourcentage);
   if (pourcentage>=0 && pourcentage<=100) {
-    if (pourcentage<=3 || pourcentage>97) {//no effect if % >97 or <3
+    if (pourcentage<=3 || pourcentage>97) {//pas  d'effet si % >97 or <3
       var div=$("<div class='textBar'>"+pourcentage+" %&nbsp</div>")
     }
     else {
@@ -28,7 +29,6 @@ function findPourcentage(elementClass) {
           regex.lastIndex++;
       }
 
-      // The result can be accessed through the `m`-variable.
       m.forEach((match, groupIndex) => {
           find=match
       });

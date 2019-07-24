@@ -1,5 +1,6 @@
 console.log('class SaveManipulator load');
 export default class SaveManipulator {
+  //  controlle les sauvegardes/chargements
   constructor(manipulator) {
     this.manipulator = manipulator;
     console.log(manipulator);

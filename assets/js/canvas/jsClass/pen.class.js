@@ -1,4 +1,5 @@
 export default class Pen {
+  // objet pour representer le stylo avec sa couleur,taille,position
   constructor(color='black',width='5') {
     this.color=color;
     this.width=width;

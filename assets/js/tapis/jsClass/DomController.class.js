@@ -1,20 +1,12 @@
 console.log('class DomController load');
 export default class DomController {
+  // controlle la plupart des création,detection,supression d'element HTML
   constructor() {
     this.nbrSaveButton=9
     var div =this.creationSaveLoadButton()
     $("#sousSection").prepend(div)
     //this.creatAll()
     console.log('endDomController');
-  }
-  findMainContainer(){
-    this.mainContainer=$("#containerSvg")
-  }
-  creatAll(){
-    var sousSection=this.createSousSection()
-    var animationButton=this.creationAnimationButton()
-    this.mainContainer.append(sousSection)
-    this.mainContainer.append(animationButton)
   }
   creationAnimationButton(){
     var div =this.creationDomElement('div','animationButton')
@@ -50,19 +42,8 @@ export default class DomController {
     }
     return loadSave
   }
-  createSousSection(){
-
-    var loadSave=this.creationSaveLoadButton()
-
-    var frame=this.creationDomElement('div','frame')
-    var svg=this.creationDomElement('svg','svg')
-    sousSection.append(loadSave)
-    frame.append(svg)
-    sousSection.append(frame)
-    return sousSection
-
-  }
   creationDomElement(type,id=null,html=null,classe=null){
+    // fontion générale pour créer un element
     var element =$("<"+type+"></"+type+">")
     if (html!=null) {
       element.html(html)
