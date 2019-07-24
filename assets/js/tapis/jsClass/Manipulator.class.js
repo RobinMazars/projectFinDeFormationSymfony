@@ -93,6 +93,11 @@ export default class Manipulator {
     $("#figureGrpGhost").append(svg);
     $("#object-"+id).attr('fill-opacity','0.5');
   }
+  clearGhost(){
+    console.log("clear GHOST");
+    $("#figureGrpGhost").empty()
+    util.refresh("#figureGrpGhost")
+  }
   placeObject(classes, pos,type=null,ghost=false) {
     var objectOnPlace = this.findAllObject(pos)
     if (objectOnPlace.length == 0) {
@@ -112,7 +117,7 @@ export default class Manipulator {
       this.writeObject(object);
       }
     }
-      else if (ghost==false){
+      else {
       var already = false;
       for (var i = 0; i < objectOnPlace.length; i++) {
         var object = this.listeObject[objectOnPlace[i]]
@@ -131,6 +136,15 @@ export default class Manipulator {
         //console.log(object);
         this.addObject(object)
         this.writeObject(object)
+      }
+      else if (ghost==true) {
+        if (type!=null && classes.getClassName()=='Tapis') {
+          var object = new classes(pos,type)
+        }
+        else {
+          var object = new classes(pos)
+        }
+        this.placeGhost(object);
       }
     }
     util.refresh("#figureGrp")

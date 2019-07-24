@@ -184,6 +184,7 @@ export default class EventController {
         var pos = self.manipulator.calcPos(posMouse)
         if (self.actualPosMouse == null || !pos.isEqual(self.actualPosMouse)) {
           self.actualPosMouse = pos;
+          self.manipulator.clearGhost()
           // console.log("changement case");
           self.manipulator.placeObject(self.manipulator.selected, self.actualPosMouse,null,true)
         }
@@ -206,6 +207,8 @@ export default class EventController {
         });
       });
     }, function() {
+      self.manipulator.clearGhost()
+      self.actualPosMouse = null
       $(document).unbind('mousemove')
       $(document).unbind('keypress')
       $('h1').css('background', '');

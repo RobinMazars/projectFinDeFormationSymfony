@@ -3,7 +3,6 @@ import Tapis from './jsClass/Tapis.class.js';
 import Ore from './jsClass/Ore.class.js';
 import Manipulator from './jsClass/Manipulator.class.js';
 import Position from './jsClass/Position.class.js';
-// BUG: ghost dont remove after pose and go outside frame
 
 
 
