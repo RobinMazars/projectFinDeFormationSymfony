@@ -5,8 +5,12 @@ Encore
     // directory where compiled assets will be stored
     .setOutputPath('www/build/')
     // public path used by the web server to access the output path
-    .setPublicPath('/my-project/www/build')
-    // .setPublicPath('www/build')
+
+    // locale :
+    // .setPublicPath('/my-project/www/build')
+    // online :
+    .setPublicPath('/build')
+
     // .setPublicPath('https://code.jquery.com/jquery-3.4.1.js')
     // only needed for CDN's or sub-directory deploy
     // .setManifestKeyPrefix('build/')
@@ -34,6 +38,16 @@ Encore
     .addEntry('barJs', './assets/js/home/bar.js')
     .addEntry('canvasJs', './assets/js/canvas/canvasMain.js')
     .addEntry('tapisJs', './assets/js/tapis/tapisMain.js')
+
+    .copyFiles({
+      from: './assets/media/image',
+      pattern: /\.(ico|png)$/,
+    })
+    .copyFiles({
+      from: './assets/media/',
+      to:'/file/[name].[ext]',
+      pattern: /\.pdf$/,
+    })
     .autoProvidejQuery()
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')

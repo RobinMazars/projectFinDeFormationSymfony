@@ -1,98 +1,98 @@
 {
   "entrypoints": {
-    "normalizeCss": {
+    "tapisCss": {
       "js": [
-        "/my-project/www/build/runtime.js"
+        "/build/runtime.js"
       ],
       "css": [
-        "/my-project/www/build/normalizeCss.css"
-      ]
-    },
-    "barJs": {
-      "js": [
-        "/my-project/www/build/runtime.js",
-        "/my-project/www/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
-        "/my-project/www/build/barJs.js"
-      ]
-    },
-    "canvasJs": {
-      "js": [
-        "/my-project/www/build/runtime.js",
-        "/my-project/www/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
-        "/my-project/www/build/canvasJs.js"
-      ]
-    },
-    "tapisJs": {
-      "js": [
-        "/my-project/www/build/runtime.js",
-        "/my-project/www/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
-        "/my-project/www/build/vendors~navJs~tapisJs.js",
-        "/my-project/www/build/vendors~tapisJs.js",
-        "/my-project/www/build/tapisJs.js"
-      ]
-    },
-    "masterCss": {
-      "js": [
-        "/my-project/www/build/runtime.js"
-      ],
-      "css": [
-        "/my-project/www/build/masterCss.css"
+        "/build/tapisCss.css"
       ]
     },
     "navJs": {
       "js": [
-        "/my-project/www/build/runtime.js",
-        "/my-project/www/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
-        "/my-project/www/build/vendors~navJs~tapisJs.js",
-        "/my-project/www/build/navJs.js"
+        "/build/runtime.js",
+        "/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
+        "/build/vendors~navJs~tapisJs.js",
+        "/build/navJs.js"
       ]
     },
-    "tapisCss": {
+    "canvasJs": {
       "js": [
-        "/my-project/www/build/runtime.js"
+        "/build/runtime.js",
+        "/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
+        "/build/canvasJs.js"
+      ]
+    },
+    "tapisJs": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
+        "/build/vendors~navJs~tapisJs.js",
+        "/build/vendors~tapisJs.js",
+        "/build/tapisJs.js"
+      ]
+    },
+    "masterCss": {
+      "js": [
+        "/build/runtime.js"
       ],
       "css": [
-        "/my-project/www/build/tapisCss.css"
+        "/build/masterCss.css"
+      ]
+    },
+    "normalizeCss": {
+      "js": [
+        "/build/runtime.js"
+      ],
+      "css": [
+        "/build/normalizeCss.css"
+      ]
+    },
+    "barJs": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
+        "/build/barJs.js"
       ]
     },
     "barCss": {
       "js": [
-        "/my-project/www/build/runtime.js"
+        "/build/runtime.js"
       ],
       "css": [
-        "/my-project/www/build/barCss.css"
+        "/build/barCss.css"
       ]
     },
     "pieceCss": {
       "js": [
-        "/my-project/www/build/runtime.js"
+        "/build/runtime.js"
       ],
       "css": [
-        "/my-project/www/build/pieceCss.css"
+        "/build/pieceCss.css"
       ]
     },
     "canvasCss": {
       "js": [
-        "/my-project/www/build/runtime.js"
+        "/build/runtime.js"
       ],
       "css": [
-        "/my-project/www/build/canvasCss.css"
+        "/build/canvasCss.css"
       ]
     },
     "bddCss": {
       "js": [
-        "/my-project/www/build/runtime.js"
+        "/build/runtime.js"
       ],
       "css": [
-        "/my-project/www/build/bddCss.css"
+        "/build/bddCss.css"
       ]
     },
     "cvCss": {
       "js": [
-        "/my-project/www/build/runtime.js"
+        "/build/runtime.js"
       ],
       "css": [
-        "/my-project/www/build/cvCss.css"
+        "/build/cvCss.css"
       ]
     }
   }

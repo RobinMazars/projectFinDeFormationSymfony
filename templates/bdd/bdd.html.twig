@@ -57,6 +57,7 @@
       </table>
     {% else %}
       <p>Pas de produit trouvé</p>
+      <a href="{{path('bdd')}}">Reset Formulaire</a>
     {% endif %}
     {% if recherche is defined %}
     {% else %}
@@ -64,7 +65,7 @@
     {% endif %}
     {% if info is defined %}
       <section>
-        <h2>Informations suplémentaires</h2>
+        <h2>Informations supplémentaires</h2>
         <table>
           <thead>
             <th>Nombre de produit en vente</th>
@@ -81,7 +82,8 @@
       </section>
     {% endif %}
     <section>
-      Explication
+      <h3>Explication</h3>
+      <p>Tableaux d'une base de donnée MySQL avec recherche sur le champs :nom du produit</p>
     </section>
   {% endblock %}
   {% block bottomLink %}

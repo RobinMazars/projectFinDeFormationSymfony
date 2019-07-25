@@ -2,6 +2,8 @@
 <html lang="fe" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="{{ asset('build/favicon.ico') }}" />
+
     <title>Mazars Robin -
       {% block title %}{% endblock %}
     </title>
@@ -16,7 +18,11 @@
   </head>
   <body>
     <header>
-      <img src="" alt="Logo">
+      <div>
+        <a id="logoFrame" href="{{path('home')}}"><img id="logo" src="{{asset('build/Trademark-symbolTrans.png')}}" border="0" alt="Logo"></a>
+
+      </div>
+
       <nav>
         <ul>
           <li>
@@ -62,7 +68,7 @@
           </li>
         </ul>
       </nav>
-      <small>Site Web créer par Mazars Robin</small>
+      <small>Site Web crée par Mazars Robin</small>
       <small>2018-2019</small>
       {% block bottomLink %}
       {{encore_entry_script_tags('navJs')}}

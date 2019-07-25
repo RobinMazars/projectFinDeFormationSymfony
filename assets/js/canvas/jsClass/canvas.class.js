@@ -11,12 +11,13 @@ export default class Canvas {
   }
   eraserOn(){
     // TODO: change lineWidth
-    this.ctx.globalCompositedOperation = 'destination-out';
-    this.ctx.lineWidth = 200;
+    this.ctx.globalCompositeOperation = 'destination-out';
+    this.pen.width = 20
+
   }
   eraserOff(){
     this.ctx.globalCompositeOperation = 'source-over';
-    this.ctx.lineWidth = this.pen.getWidth();
+    this.pen.width = 5
   }
   clearAll(){
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
