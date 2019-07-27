@@ -1,7 +1,7 @@
 //init
 import Canvas from "./jsClass/canvas.class.js"
 var canvas = new Canvas();
-//initBind
+//initialisation Bind
 $("#canvas").css('background', 'steelblue');
 $("#canvas").mousedown(function(event) {
   mouseDown(event);

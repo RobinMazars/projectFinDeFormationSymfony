@@ -10,12 +10,13 @@ export default class Canvas {
 
   }
   eraserOn(){
-    // TODO: change lineWidth
+    // mode effacement
     this.ctx.globalCompositeOperation = 'destination-out';
     this.pen.width = 20
 
   }
   eraserOff(){
+    // mode ecriture
     this.ctx.globalCompositeOperation = 'source-over';
     this.pen.width = 5
   }
