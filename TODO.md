@@ -1,0 +1,5 @@
+- [ ] change fe -> fr
+- [ ] change lien vers 101 -> 42
+- [ ] remove console.log partout
+- [ ] piece : mettre des bouton pour que les piece tourne sur mobile
+- [ ] tapis : metre une demo et mobile compatible
