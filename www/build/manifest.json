@@ -9,14 +9,18 @@
   "build/navJs.js": "/build/navJs.js",
   "build/normalizeCss.css": "/build/normalizeCss.css",
   "build/pieceCss.css": "/build/pieceCss.css",
+  "build/pieceJs.js": "/build/pieceJs.js",
   "build/runtime.js": "/build/runtime.js",
   "build/tapisCss.css": "/build/tapisCss.css",
   "build/tapisJs.js": "/build/tapisJs.js",
+  "build/vendors~barJs~canvasJs~navJs~pieceJs~tapisJs.js": "/build/vendors~barJs~canvasJs~navJs~pieceJs~tapisJs.js",
   "build/vendors~barJs~canvasJs~navJs~tapisJs.js": "/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
   "build/vendors~navJs~tapisJs.js": "/build/vendors~navJs~tapisJs.js",
   "build/vendors~tapisJs.js": "/build/vendors~tapisJs.js",
-  "build//file/CVmid2019.pdf": "/build//file/CVmid2019.pdf",
+  "build//file/CVmid2020.pdf": "/build//file/CVmid2020.pdf",
+  "build/C.png": "/build/C.png",
   "build/Trademark-symbolTrans.png": "/build/Trademark-symbolTrans.png",
   "build/favicon.ico": "/build/favicon.ico",
-  "build/images/MaxPixel.freegreatpicture.com-Digital-Board-Interfaces-Circuits-Conductors-730793.jpg": "/build/images/MaxPixel.freegreatpicture.com-Digital-Board-Interfaces-Circuits-Conductors-730793.ca9b53c6.jpg"
+  "build/images/MaxPixel.freegreatpicture.com-Digital-Board-Interfaces-Circuits-Conductors-730793.jpg": "/build/images/MaxPixel.freegreatpicture.com-Digital-Board-Interfaces-Circuits-Conductors-730793.ca9b53c6.jpg",
+  "build/camelCaesar-2048.png": "/build/camelCaesar-2048.png"
 }

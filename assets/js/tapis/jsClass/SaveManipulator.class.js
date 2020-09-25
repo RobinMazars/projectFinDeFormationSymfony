@@ -1,9 +1,9 @@
-console.log('class SaveManipulator load');
+// console.log('class SaveManipulator load');
 export default class SaveManipulator {
   //  controlle les sauvegardes/chargements
   constructor(manipulator) {
     this.manipulator = manipulator;
-    console.log(manipulator);
+    // console.log(manipulator);
     //this.clearAllSave()
   }
   checkSave() {
@@ -21,11 +21,11 @@ export default class SaveManipulator {
     }
   }
   clearSave(id) {
-    console.log("clearSave "+id );
+    // console.log("clearSave "+id );
     localStorage.removeItem('Save-' + id)
   }
   save(nameSave = 'default') {
-    console.log('save');
+    // console.log('save');
     var liste = []
     for (var i = 0; i < this.manipulator.listeObject.length; i++) {
       var classe = this.manipulator.listeObject[i].getClassNameFromObject()
@@ -48,7 +48,7 @@ export default class SaveManipulator {
     localStorage.setItem('Save-' + nameSave, JSON.stringify(liste));
   }
   load(nameSave = 'default') {
-    console.log('load');
+    // console.log('load');
     var data = JSON.parse(localStorage.getItem('Save-' + nameSave));
     //console.log(data);
     this.manipulator.reset(data);

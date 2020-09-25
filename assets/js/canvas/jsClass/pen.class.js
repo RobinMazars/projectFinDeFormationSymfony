@@ -1,30 +1,30 @@
 export default class Pen {
   // objet pour representer le stylo avec sa couleur,taille,position
-  constructor(color='black',width='5') {
-    this.color=color;
-    this.width=width;
+  constructor(color = 'black', width = '5') {
+    this.color = color;
+    this.width = width;
   }
-  setColor(newColor){
-    this.color=newColor
+  setColor(newColor) {
+    this.color = newColor
   }
-  setWidth(newWidth){
-    this.width=newWidth
+  setWidth(newWidth) {
+    this.width = newWidth
   }
-  getColor(){
+  getColor() {
     return this.color
   }
-  getWidth(){
+  getWidth() {
     return this.width
   }
-  getPos(e,canvas) {
-        var offset = canvas.getBoundingClientRect();
-        var styles = window.getComputedStyle(canvas);
-        var cursorX = e.clientX - offset.left - parseInt(styles.borderLeftWidth);
-        var cursorY = e.clientY - offset.top - parseInt(styles.borderTopWidth);
-        return {
-          x: cursorX,
-          y: cursorY
-        }
-      }
+  getPos(e, canvas) {
+    var offset = canvas.getBoundingClientRect();
+    var styles = window.getComputedStyle(canvas);
+    var cursorX = e.clientX - offset.left - parseInt(styles.borderLeftWidth);
+    var cursorY = e.clientY - offset.top - parseInt(styles.borderTopWidth);
+    return {
+      x: cursorX,
+      y: cursorY
+    }
+  }
 
 }

@@ -30,7 +30,7 @@ export default class Canvas {
     this.ctx.lineCap = 'round';
     this.ctx.lineJoin = 'round';
     var pos = this.pen.getPos(event, this.canvas);
-    console.log(pos);
+    // console.log(pos);
     this.ctx.lineTo(pos.x, pos.y);
     this.ctx.stroke()
   }

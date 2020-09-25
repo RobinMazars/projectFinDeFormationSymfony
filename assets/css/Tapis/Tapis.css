@@ -28,13 +28,15 @@ object {
   flex-direction: column;
   justify-content: space-around;
   }
-#selector .selectorItem {
+#selector .selectorItem, #BtnDemo {
   padding: 15px;
 }
-#selector > .selected {
+#selector > .selected, #BtnDemo {
   background-color: steelblue;
   color: white;
-
+}
+#BtnDemo {
+  margin: auto;
 }
 #loadSave {
   display: flex;

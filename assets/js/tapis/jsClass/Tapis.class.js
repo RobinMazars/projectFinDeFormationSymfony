@@ -1,4 +1,4 @@
-console.log('class tapis load');
+// console.log('class tapis load');
 import AbstractObject from'./AbstractObject.class.js';
 
 export default class Tapis extends AbstractObject {
@@ -56,7 +56,7 @@ export default class Tapis extends AbstractObject {
   }
 
   static aff(){
-    console.log('tapis aff');
+    // console.log('tapis aff');
   }
 
 }

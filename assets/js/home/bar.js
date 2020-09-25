@@ -1,8 +1,8 @@
-// js pour la création des bar dans la page home 
+// js pour la création des bar dans la page home
 var listBar=$(".bar")
 for (var i = 0; i < listBar.length; i++) {
   var pourcentage=findPourcentage(listBar.eq(i).attr('class'));
-  console.log(pourcentage);
+  // console.log(pourcentage);
   if (pourcentage>=0 && pourcentage<=100) {
     if (pourcentage<=3 || pourcentage>97) {//pas  d'effet si % >97 or <3
       var div=$("<div class='textBar'>"+pourcentage+" %&nbsp</div>")
@@ -11,7 +11,7 @@ for (var i = 0; i < listBar.length; i++) {
       var div=$("<div class='textBar effectBar'>"+pourcentage+" %&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div>")
     }
     listBar.eq(i).append(div);
-    console.log(div.attr('padding-right'));
+    // console.log(div.attr('padding-right'));
     div.css('width',pourcentage+"%");
   }
 }

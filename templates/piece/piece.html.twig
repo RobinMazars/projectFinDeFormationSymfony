@@ -1,41 +1,48 @@
 {% extends 'layout.html.twig' %}
 {% block title %}Pièce{% endblock %}
 {% block link %}
-{{parent()}}
-{{encore_entry_link_tags('pieceCss')}}
+  {{parent()}}
+  {{encore_entry_link_tags('pieceCss')}}
 {% endblock %}
 {% block content %}
-<section>
-  <h1>CSS manipulation</h1>
-  <div id="frame">
-    <div id="piece">
-      <div class="piecePart" id="pieceFace">
-        <p>face</p>
-      </div>
-      <div class="piecePart" id="piecePile">
-        <p>pile</p>
-      </div>
-      <div class="corner" id="corner2">
-      </div>
-      <div class="corner" id="corner1">
-      </div>
-      <div class="corner" id="corner3">
-      </div>
-      <div class="corner" id="corner4">
+  <section>
+    <h1>CSS manipulation</h1>
+    <div id="frame">
+      <div id="piece">
+        <div class="piecePart" id="pieceFace">
+          <p>face</p>
+        </div>
+        <div class="piecePart" id="piecePile">
+          <p>pile</p>
+        </div>
+        <div class="corner" id="corner2"></div>
+        <div class="corner" id="corner1"></div>
+        <div class="corner" id="corner3"></div>
+        <div class="corner" id="corner4"></div>
       </div>
     </div>
-  </div>
-  <p>Effet d'optique d'une pièce avec une tranche carrée</p>
-</section>
-<section>
-  <div id="frame2">
-    <div id="piece2">
-      <div class="piecePart" id="pieceFace2">
-      </div>
-      <div class="piecePart" id="piecePile2">
+    <p>Effet d'optique d'une pièce avec une tranche carrée</p>
+    <button id="playBtn" type="button">
+        Play 
+        <i class="fas fa-play"></i>
+    </button>
+
+  </section>
+  <section>
+    <div id="frame2">
+      <div id="piece2">
+        <div class="piecePart" id="pieceFace2"></div>
+        <div class="piecePart" id="piecePile2"></div>
       </div>
     </div>
-  </div>
-  <p>Pièce avec trois faces</p>
-</section>
+    <p>Pièce avec trois faces</p>
+    <button id="playBtn2" type="button">
+        Play
+        <i class="fas fa-play"></i>
+    </button>
+  </section>
+{% endblock %}
+{% block bottomLink %}
+{{parent()}}
+{{encore_entry_script_tags('pieceJs')}}
 {% endblock %}

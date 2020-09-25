@@ -1,17 +1,20 @@
-#mainTitle{
+#mainTitle {
   padding: 1% 2%;
   background-color: white;
   width: 50%;
 }
-h1{
+
+h1 {
   font-size: 35px;
 }
+
 .bar {
   width: 90%;
   margin: auto;
   background-color: lightgrey;
   height: 20px;
 }
+
 .textBar {
   text-align: right;
   margin-right: 15px;
@@ -19,6 +22,7 @@ h1{
   position: relative;
   height: 20px;
 }
+
 .effectBar.textBar:before {
   content: '';
   position: absolute;
@@ -27,28 +31,56 @@ h1{
   border-top: 20px solid lightgrey;
   width: 0;
 }
+
 .bar:nth-of-type(odd) .effectBar.textBar:before {
   border-left: 20px solid steelblue;
 }
+
 .bar:nth-of-type(odd) .textBar {
   background-color: steelblue;
 }
+
 .bar:nth-of-type(even) .textBar {
   background-color: red;
 }
+
 .bar:nth-of-type(even) .effectBar.textBar:before {
   border-left: 20px solid red;
 }
-.fab{
-  font-size:25px;
+
+.fab {
+  font-size: 25px;
+}
+
+h4 .language {
+  padding-top: 2%;
+}
+
+.logoLang{
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.visual{
+  width: 10rem;
+  border-style: solid;
+  border-width: 0.5rem;
+  border-color: steelblue;
+}
+.language {
+  display: inline;
+}
+
+.language p{
+  text-align: justify;
 }
 #lienRealisation {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
 #lienRealisation a {
-  flex:1;
+  flex: 1;
   padding: 0.8% 4%;
   margin: 0.5%;
   background-color: steelblue;
@@ -58,14 +90,17 @@ h1{
   font-size: 25px;
   text-align: center;
 }
+
 #lienRealisation a:hover {
   background-color: red;
   color: black;
 }
+
 #lienRealisation a:active {
   background-color: green;
 }
-#contactBtn a{
+
+#contactBtn a {
   padding: 0.8% 4%;
   background-color: steelblue;
   color: white;
@@ -74,14 +109,17 @@ h1{
   font-size: 17px;
   text-align: center;
 }
+
 #contactBtn a:hover {
   background-color: red;
   color: black;
 }
+
 @media (min-width: 780px) {
   #lienRealisation {
     flex-direction: row;
     justify-content: space-around;
   }
 }
+
 /*# sourceMappingURL=home.css.map */

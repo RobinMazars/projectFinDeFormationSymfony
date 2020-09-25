@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fe" dir="ltr">
+<html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="icon" href="{{ asset('build/favicon.ico') }}" />
+    <link rel="icon" href="{{ asset('build/favicon.ico') }}"/>
 
     <title>Mazars Robin -
       {% block title %}{% endblock %}
@@ -26,13 +26,15 @@
       <nav>
         <ul>
           <li>
-            <a href="{{path('home')}}"><i class="fas fa-home"></i>Home</a>
+            <a href="{{path('home')}}">
+              <i class="fas fa-home"></i>Home</a>
           </li>
           <li class="sousMenusTitle">
-            <i class="fas fa-folder-open" ></i><a href="#">Réalisations</a>
+            <i class="fas fa-folder-open"></i>
+            <a href="#">Réalisations</a>
             <ul class="sousMenusListe" style="display: none">
               <li>
-                  <a href="{{path('piece')}}">Piece CSS</a>
+                <a href="{{path('piece')}}">Piece CSS</a>
               </li>
               <li>
                 <a href="{{path('canvas')}}">Canvas</a>
@@ -46,10 +48,12 @@
             </ul>
           </li>
           <li>
-            <a href="{{path('cv')}}"><i class="fas fa-file"></i>CV</a>
+            <a href="{{path('cv')}}">
+              <i class="fas fa-file"></i>CV</a>
           </li>
           <li>
-            <a href="{{path('contact')}}  "><i class="fas fa-envelope"></i>Me contacter</a>
+            <a href="{{path('contact')}}  ">
+              <i class="fas fa-envelope"></i>Me contacter</a>
           </li>
         </ul>
       </nav>
@@ -61,18 +65,22 @@
       <nav>
         <ul>
           <li>
-            <a href="{{path('home')}}"><i class="fas fa-home"></i> Home</a>
+            <a href="{{path('home')}}">
+              <i class="fas fa-home"></i>
+              Home</a>
           </li>
           <li>
-            <a href="{{path('contact')}}"><i class="fas fa-envelope"></i> Me contacter</a>
+            <a href="{{path('contact')}}">
+              <i class="fas fa-envelope"></i>
+              Me contacter</a>
           </li>
         </ul>
       </nav>
       <small>Site Web crée par Mazars Robin</small>
-      <small>2018-2019</small>
+      <small>2018-2020</small>
       {% block bottomLink %}
-      {{encore_entry_script_tags('navJs')}}
-      {{encore_entry_script_tags('barJs')}}
+        {{encore_entry_script_tags('navJs')}}
+        {{encore_entry_script_tags('barJs')}}
       {% endblock %}
 
     </footer>

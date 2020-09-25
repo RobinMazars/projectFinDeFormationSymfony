@@ -1,45 +1,5 @@
 {
   "entrypoints": {
-    "tapisCss": {
-      "js": [
-        "/build/runtime.js"
-      ],
-      "css": [
-        "/build/tapisCss.css"
-      ]
-    },
-    "navJs": {
-      "js": [
-        "/build/runtime.js",
-        "/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
-        "/build/vendors~navJs~tapisJs.js",
-        "/build/navJs.js"
-      ]
-    },
-    "canvasJs": {
-      "js": [
-        "/build/runtime.js",
-        "/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
-        "/build/canvasJs.js"
-      ]
-    },
-    "tapisJs": {
-      "js": [
-        "/build/runtime.js",
-        "/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
-        "/build/vendors~navJs~tapisJs.js",
-        "/build/vendors~tapisJs.js",
-        "/build/tapisJs.js"
-      ]
-    },
-    "masterCss": {
-      "js": [
-        "/build/runtime.js"
-      ],
-      "css": [
-        "/build/masterCss.css"
-      ]
-    },
     "normalizeCss": {
       "js": [
         "/build/runtime.js"
@@ -51,8 +11,55 @@
     "barJs": {
       "js": [
         "/build/runtime.js",
-        "/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
+        "/build/vendors~barJs~canvasJs~navJs~pieceJs~tapisJs.js",
         "/build/barJs.js"
+      ]
+    },
+    "canvasJs": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~barJs~canvasJs~navJs~pieceJs~tapisJs.js",
+        "/build/canvasJs.js"
+      ]
+    },
+    "tapisJs": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~barJs~canvasJs~navJs~pieceJs~tapisJs.js",
+        "/build/vendors~navJs~tapisJs.js",
+        "/build/vendors~tapisJs.js",
+        "/build/tapisJs.js"
+      ]
+    },
+    "pieceJs": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~barJs~canvasJs~navJs~pieceJs~tapisJs.js",
+        "/build/pieceJs.js"
+      ]
+    },
+    "masterCss": {
+      "js": [
+        "/build/runtime.js"
+      ],
+      "css": [
+        "/build/masterCss.css"
+      ]
+    },
+    "navJs": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~barJs~canvasJs~navJs~pieceJs~tapisJs.js",
+        "/build/vendors~navJs~tapisJs.js",
+        "/build/navJs.js"
+      ]
+    },
+    "tapisCss": {
+      "js": [
+        "/build/runtime.js"
+      ],
+      "css": [
+        "/build/tapisCss.css"
       ]
     },
     "barCss": {

@@ -1,14 +1,14 @@
-console.log('class ore load');
+// console.log('class ore load');
 import AbstractObject from'./AbstractObject.class.js';
 
 export default class Ore extends AbstractObject {
-  // class pour les minerais 
+  // class pour les minerais
   constructor(pos) {
     super(pos)
     this.setSvg()
   }
   static aff() {
-    console.log('ore aff');
+    // console.log('ore aff');
   }
   static def() {
     return super.def('rgba(0,0,0,0.5)', 'ore', 'M3 0 L7 0 L 10 3 L 10 7 L 7 10 L 3 10 L 0 7 L 0 3')

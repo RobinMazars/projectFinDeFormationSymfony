@@ -7,7 +7,7 @@ $("#canvas").mousedown(function(event) {
   mouseDown(event);
 });
 $("#color").change(function(event) {
-  console.log($(this).val())
+  // console.log($(this).val())
   canvas.pen.setColor($(this).val())
 });
 $("#gomme").click(eraserOn);
@@ -33,7 +33,7 @@ $("#btnErase").click(function(event) {
 
 function mouseDown(e) {
   // action quand on entre en mode ecriture
-  console.log('mousedown');
+  // console.log('mousedown');
   canvas.startDrawLine(e)
   $("#canvas").mousemove(function(event) {
     canvas.continueDrawLine(event)
@@ -50,7 +50,7 @@ function mouseDown(e) {
 
 function mouseUp(e) {
   // action quand on sort du mode ecriture
-  console.log('mouseup');
+  // console.log('mouseup');
   canvas.endDrawLine()
   $("#canvas").unbind('mousemove');
   $("#canvas").unbind()

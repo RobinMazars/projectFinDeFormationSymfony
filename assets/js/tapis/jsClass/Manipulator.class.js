@@ -1,7 +1,7 @@
-console.log('class manipulator load');
-import Grille from'./Grille.class.js';
-import EventController from'./EventController.class.js';
-import SaveManipulator from'./SaveManipulator.class.js';
+// console.log('class manipulator load');
+import Grille from './Grille.class.js';
+import EventController from './EventController.class.js';
+import SaveManipulator from './SaveManipulator.class.js';
 import * as util from "./util.js";
 import Tapis from './Tapis.class.js';
 import Ore from './Ore.class.js';
@@ -27,7 +27,7 @@ export default class Manipulator {
     $("<div id='selector'> </div>").insertAfter("#containerFrameControl")
     for (var i = 0; i < this.listeClass.length; i++) {
       var className = this.listeClass[i].getClassName();
-      console.log(className);
+      // console.log(className);
       $("#selector").append(("<button  class='selectorItem' type='button' >" + className + "</button>"));
     }
   }
@@ -86,38 +86,35 @@ export default class Manipulator {
     var pos = new Position(x.toString(), y.toString(), direction);
     return pos;
   }
-  placeGhost(object){
+  placeGhost(object) {
     $("#figureGrpGhost").empty()
     var svg = object.getSvg();
     var id = object.getId();
     $("#figureGrpGhost").append(svg);
-    $("#object-"+id).attr('fill-opacity','0.5');
+    $("#object-" + id).attr('fill-opacity', '0.5');
   }
-  clearGhost(){
-    console.log("clear GHOST");
+  clearGhost() {
+    // console.log("clear GHOST");
     $("#figureGrpGhost").empty()
     util.refresh("#figureGrpGhost")
   }
-  placeObject(classes, pos,type=null,ghost=false) {
+  placeObject(classes, pos, type = null, ghost = false) {
     var objectOnPlace = this.findAllObject(pos)
     if (objectOnPlace.length == 0) {
-      if (type!=null && classes.getClassName()=='Tapis') {
-        var object = new classes(pos,type)
-      }
-      else {
+      if (type != null && classes.getClassName() == 'Tapis') {
+        var object = new classes(pos, type)
+      } else {
         var object = new classes(pos)
       }
       //console.log(object);
-      if (ghost==true) {
-        console.log("object :"+object.getId());
+      if (ghost == true) {
+        // console.log("object :"+object.getId());
         this.placeGhost(object);
+      } else {
+        this.addObject(object);
+        this.writeObject(object);
       }
-      else {
-      this.addObject(object);
-      this.writeObject(object);
-      }
-    }
-      else {
+    } else {
       var already = false;
       for (var i = 0; i < objectOnPlace.length; i++) {
         var object = this.listeObject[objectOnPlace[i]]
@@ -126,22 +123,19 @@ export default class Manipulator {
           already = true;
         }
       }
-      if (!already && ghost==false) {
-        if (type!=null && classes.getClassName()=='Tapis') {
-          var object = new classes(pos,type)
-        }
-        else {
+      if (!already && ghost == false) {
+        if (type != null && classes.getClassName() == 'Tapis') {
+          var object = new classes(pos, type)
+        } else {
           var object = new classes(pos)
         }
         //console.log(object);
         this.addObject(object)
         this.writeObject(object)
-      }
-      else if (ghost==true) {
-        if (type!=null && classes.getClassName()=='Tapis') {
-          var object = new classes(pos,type)
-        }
-        else {
+      } else if (ghost == true) {
+        if (type != null && classes.getClassName() == 'Tapis') {
+          var object = new classes(pos, type)
+        } else {
           var object = new classes(pos)
         }
         this.placeGhost(object);
@@ -223,29 +217,29 @@ export default class Manipulator {
     var caseHeight = parseInt(this.grille.caseHeight)
     var caseWidth = parseInt(this.grille.caseWidth)
     var collision = false;
-    console.log(pos.x);
-    console.log(pos.y);
-    console.log('dir:' + direction);
+    // console.log(pos.x);
+    // console.log(pos.y);
+    // console.log('dir:' + direction);
     if (direction == 0) {
-      console.log('direction prévu:' + 0);
+      // console.log('direction prévu:' + 0);
       destination.x = pos.x;
       destination.y = parseInt(pos.y) - caseHeight
     } else if (direction == 1) {
-      console.log('direction prévu:' + 1);
+      // console.log('direction prévu:' + 1);
       destination.x = parseInt(pos.x) + caseWidth;
       destination.y = pos.y
     } else if (direction == 2) {
-      console.log('direction prévu:' + 2);
+      // console.log('direction prévu:' + 2);
       destination.x = pos.x;
       destination.y = parseInt(pos.y) + caseHeight
     } else {
-      console.log('direction prévu:' + 3);
+      // console.log('direction prévu:' + 3);
       destination.x = parseInt(pos.x) - caseWidth;
       destination.y = pos.y
     }
-    console.log(destination);
+    // console.log(destination);
     var listeObjectFind = this.findAllObject(destination)
-    console.log(listeObjectFind);
+    // console.log(listeObjectFind);
     for (var i = 0; i < listeObjectFind.length; i++) {
       var classes = this.listeObject[listeObjectFind[i]].getClassNameFromObject()
       if (classes == 'Ore') {
@@ -261,30 +255,30 @@ export default class Manipulator {
         var tapisUnder = this.findObject(this.listeObject[i].pos, Ore)
 
         if (tapisUnder != null) {
-          console.log('tapisUnder ' + tapisUnder.getId());
-          console.log(tapisUnder.type);
+          // console.log('tapisUnder ' + tapisUnder.getId());
+          // console.log(tapisUnder.type);
 
-          console.log('tapisUnder direction ' + tapisUnder.pos.direction);
+          // console.log('tapisUnder direction ' + tapisUnder.pos.direction);
           var moveDirection = this.calcDirection(tapisUnder.type,
             tapisUnder.pos.direction)
           var collision = this.checkCollision(this.listeObject[i].pos, moveDirection)
           //console.log(collision);
           if (!collision) {
-            console.log("direction move " + moveDirection);
+            // console.log("direction move " + moveDirection);
             var direction = this.calcMove(moveDirection)
             //console.log(direction);
 
-            var move = this.getMove(this.listeObject[i],direction, this.grille.caseWidth, this.grille.caseHeight)
+            var move = this.getMove(this.listeObject[i], direction, this.grille.caseWidth, this.grille.caseHeight)
             //console.log(move);
             //console.log(this.listeObjectChange);
-            console.log(move.posFinal);
-            var alreadyPlannedPosition=false
+            // console.log(move.posFinal);
+            var alreadyPlannedPosition = false
             for (var j = 0; j < this.listeObjectChange.length; j++) {
-              console.log(this.listeObjectChange[j].posFinal);
-              if(this.listeObjectChange[j].posFinal.x ==move.posFinal.x&&
-                this.listeObjectChange[j].posFinal.y ==move.posFinal.y
-              ){
-                alreadyPlannedPosition=true
+              // console.log(this.listeObjectChange[j].posFinal);
+              if (this.listeObjectChange[j].posFinal.x == move.posFinal.x &&
+                this.listeObjectChange[j].posFinal.y == move.posFinal.y
+              ) {
+                alreadyPlannedPosition = true
                 break
               }
             }
@@ -302,35 +296,38 @@ export default class Manipulator {
       }
     }
   }
-  getMove(object,direction, distanceX, distanceY) {
-    var position={}
+  getMove(object, direction, distanceX, distanceY) {
+    var position = {}
     if (direction.axe == 'x') {
       var posInit = object.pos.x;
       var axe = 'x'
-      position.y=object.pos.y
+      position.y = object.pos.y
       if (direction.signe == '+') {
         var posFinal = (parseInt(posInit) + distanceX).toString()
       } else {
         var posFinal = (parseInt(posInit) - distanceX).toString()
       }
-      position.x=posFinal
+      position.x = posFinal
     } else {
       var posInit = object.pos.y;
       var axe = 'y'
-      position.x=object.pos.x
+      position.x = object.pos.x
       if (direction.signe == '+') {
         var posFinal = (parseInt(posInit) + distanceY).toString()
       } else {
         var posFinal = (parseInt(posInit) - distanceY).toString()
       }
-      position.y=posFinal
+      position.y = posFinal
     }
-    var svg=object.getMove(axe,posInit,posFinal)
-    return {svg:svg,posFinal:position};
+    var svg = object.getMove(axe, posInit, posFinal)
+    return {
+      svg: svg,
+      posFinal: position
+    };
 
   }
   rewriteAll() {
-    console.log('rewrite time');
+    // console.log('rewrite time');
     var liste = this.listeObjectChange
     //console.log(this.listeObjectChange.length);
     for (var i = 0; i < liste.length; i++) {
@@ -341,7 +338,7 @@ export default class Manipulator {
   }
   rewriteObject(object, posFinal, axe, index) {
     var id = object.getId()
-    console.log('rewriteObject with id ' + id);
+    // console.log('rewriteObject with id ' + id);
     $("#object-" + id).remove()
     if (axe == 'x') {
       object.pos.x = parseInt(posFinal.x)
@@ -379,9 +376,9 @@ export default class Manipulator {
   removeObjectOnClick(pos, classes = 'default') {
     var find = this.findAllObject(pos)
     if (find.length > 1) {
-      console.log('en attente de code'); //// TODO: implemente ui to choose
+      // console.log('en attente de code'); //// TODO: implemente ui to choose
     } else if (find.length == 1) {
-      console.log('==1');
+      // console.log('==1');
       this.removeObject(find[0])
     }
     util.refresh("#figureGrp")
@@ -453,11 +450,11 @@ export default class Manipulator {
     var object = this.findObject(pos, Ore)
     if (object != null) {
       var queryObject = $("#object-" + object.getId())
-      console.log(queryObject.attr('transform'));
+      // console.log(queryObject.attr('transform'));
       var actualDegree = object.pos.direction * 90
-      console.log("actualDegree :"+actualDegree);
+      // console.log("actualDegree :"+actualDegree);
       var newDegree = (parseInt(actualDegree) + 90) % 360;
-      queryObject.attr('transform', 'rotate(' + newDegree +" "+object.originX+" "+object.originY+ ')');
+      queryObject.attr('transform', 'rotate(' + newDegree + " " + object.originX + " " + object.originY + ')');
       object.pos.direction = (object.pos.direction + 1) % 4
       util.refresh('#figureGrp')
 
@@ -479,10 +476,55 @@ export default class Manipulator {
         $("#object-" + object.getId()).attr('fill', 'url(#Tapis-' + nextType + ')');
         util.refresh("#figureGrp")
       } else {
-        console.log('object à un seul type');
+        // console.log('object à un seul type');
       }
     } else {
-      console.log("pas d'object trouvé");
+      // console.log("pas d'object trouvé");
     }
+  }
+  demo() {
+    self.manipulator.removeAllObject()
+    var caseHeight = parseInt(this.grille.caseHeight)
+    var caseWidth = parseInt(this.grille.caseWidth)
+    // class,type,x,y,direction
+    var liste = [
+      [Tapis, "right", 0, 0, 0],
+      [Tapis, "right", 0, 1, 3],
+      [Tapis, "forward", 1, 1, 3],
+      [Tapis, "forward", 2, 1, 3],
+      [Tapis, "forward", 3, 1, 3],
+      [Ore, "forward", 5, 5, 0],
+      [Tapis, "forward", 6, 2, 1],
+      [Tapis, "forward", 7, 2, 3],
+      [Ore, null, 7, 2, 0],
+      [Ore, null, 3, 1, 0],
+      [Tapis, "left", 4, 5, 3],
+      [Tapis, "left", 5, 5, 0],
+      [Tapis, "left", 4, 6, 2],
+      [Tapis, "left", 5, 6, 1],
+      [Tapis, "left", 2, 6, 0],
+      [Tapis, "forward", 2, 7, 0],
+      [Tapis, "left", 3, 7, 0],
+      [Tapis, "forward", 3, 8, 0],
+      [Ore, null, 3, 9, 0],
+      [Tapis, "forward", 3, 9, 0],
+      [Tapis, "right", 1, 6, 1],
+      [Tapis, "right", 1, 7, 2],
+      [Tapis, "right", 0, 7, 3],
+      [Tapis, "forward", 0, 6, 0],
+      [Tapis, "forward", 0, 5, 0],
+      [Tapis, "forward", 0, 4, 0],
+      [Tapis, "forward", 2, 4, 2],
+      [Ore, null, 2, 4, 0],
+      [Tapis, "forward", 2, 5, 2]
+
+    ]
+    for (var i = 0; i < liste.length; i++) {
+      var pos = new Position(liste[i][2] * caseWidth, liste[i][3] * caseWidth, liste[i][4]);
+      this.placeObject(liste[i][0], pos, liste[i][1])
+    }
+    // this.affListeObject()
+    // util.refresh("#figureGrp")
+    // this.changeUrlDef(listeObjectLoad[i].pos, listeObjectLoad[i].type)
   }
 }

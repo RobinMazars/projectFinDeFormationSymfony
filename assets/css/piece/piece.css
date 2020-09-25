@@ -6,16 +6,29 @@
   border: 8px steelblue double;
   padding: 0;
 }
+
 @keyframes rotate {
   from {
     transform: rotateY(0);
     -webkit-transform: rotateY(0);
   }
+
   to {
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
   }
 }
+
+button {
+  padding: 0.8% 4%;
+  background-color: steelblue;
+  color: black;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 17px;
+  text-align: center;
+}
+
 #piece,
 #piece2 {
   margin: 5% auto;
@@ -24,9 +37,11 @@
   text-align: center;
   transform-style: preserve-3d;
 }
-#frame:hover #piece {
+
+#frame:hover #piece, .move {
   animation: rotate linear forwards 1.5s alternate;
 }
+
 .piecePart {
   height: 400px;
   width: 400px;
@@ -34,6 +49,7 @@
   position: absolute;
   backface-visibility: hidden;
 }
+
 .corner {
   z-index: -1;
   height: 282.84271247px;
@@ -43,6 +59,7 @@
   top: 58.57864376px;
   backface-visibility: hidden;
 }
+
 #corner1 {
   background-image: linear-gradient(gold, #aba407);
   left: 150px;
@@ -50,45 +67,43 @@
   -webkit-transform: translateX(100px) translateY(100px) rotateY(90deg) rotateX(-45deg);
   transform: translateX(100px) translateY(100px) rotateY(90deg) rotateX(-45deg);
 }
+
 #corner2 {
   background-image: linear-gradient(#aba407, gold);
   -webkit-transform: translateX(100px) translateY(-100px) rotateY(90deg) rotateX(45deg);
   transform: translateX(100px) translateY(-100px) rotateY(90deg) rotateX(45deg);
 }
+
 #corner3 {
   background-image: linear-gradient(#aba407, gold);
   -webkit-transform: translateX(-100px) translateY(-100px) rotateY(270deg) rotateX(45deg);
   transform: translateX(-100px) translateY(-100px) rotateY(270deg) rotateX(45deg);
 }
+
 #corner4 {
   background-image: linear-gradient(gold, #aba407);
   -webkit-transform: translateX(-100px) translateY(100px) rotateY(270deg) rotateX(-45deg);
   transform: translateX(-100px) translateY(100px) rotateY(270deg) rotateX(-45deg);
 }
+
 #piecePile {
   background-color: gold;
   -webkit-transform: translateZ(50px);
   transform: translateZ(50px);
 }
+
 #pieceFace {
   -webkit-transform: rotateY(180deg) translateZ(50px);
   transform: rotateY(180deg) translateZ(50px);
   background-color: gold;
 }
-#frame2:hover #pieceFace2 {
-  background-color: #0000ff;
-  -webkit-transform: rotateY(360deg);
-  transform: rotateY(360deg);
-}
-#frame2:hover #pieceFace2 + #piecePile2 {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
+
 #pieceFace2 {
   z-index: 0;
   transition: background-color 2s cubic-bezier(1, 0, 0, 1), transform 2s linear;
   background-color: gold;
 }
+
 #piecePile2 {
   z-index: 0;
   transition: background-color 2s cubic-bezier(1, 0, 0, 1), transform 2s linear;
@@ -96,4 +111,16 @@
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }
+
+#frame2:hover #pieceFace2, .move2 {
+  background-color: #0000ff !important;
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
+
+#frame2:hover #pieceFace2+#piecePile2, .move2b {
+  -webkit-transform: rotateY(180deg) !important;
+  transform: rotateY(180deg) !important;
+}
+
 /*# sourceMappingURL=piece.css.map */

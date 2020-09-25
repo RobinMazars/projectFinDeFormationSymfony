@@ -38,6 +38,7 @@ Encore
     .addEntry('barJs', './assets/js/home/bar.js')
     .addEntry('canvasJs', './assets/js/canvas/canvasMain.js')
     .addEntry('tapisJs', './assets/js/tapis/tapisMain.js')
+    .addEntry('pieceJs', './assets/js/piece/pieceMain.js')
 
     .copyFiles({
       from: './assets/media/image',

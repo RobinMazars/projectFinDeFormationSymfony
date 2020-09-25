@@ -1,4 +1,4 @@
-console.log('class Grille load');
+// console.log('class Grille load');
 
 export default class Grille {
   // créer la grille de jeu

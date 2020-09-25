@@ -1,4 +1,4 @@
-console.log('class AbstractObject load');
+// console.log('class AbstractObject load');
 export default class AbstractObject {
   // class mère pour les figures avec les propriété de base
   constructor(pos) {

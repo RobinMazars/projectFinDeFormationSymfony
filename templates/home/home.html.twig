@@ -1,70 +1,107 @@
 {% extends 'layout.html.twig' %}
 {% block title %}Home{% endblock %}
 {% block content %}
-<section id="mainTitle">
-  <h1>Portfolio de Mazars Robin</h1>
-  <h1>Web développeur</h1>
-</section>
+  <section id="mainTitle">
+    <h1>Portfolio de Mazars Robin</h1>
+    <h1>Web développeur</h1>
+  </section>
 
-<h2></h2>
-<section>
-  <h2>Présentation Générale</h2>
-  <h2>Situation Actuelle</h2>
-  <p>je suis actuellement à la recherche d'un travail de développeur Web</p>
-</section>
-<section id="competence">
-  <h2>Compétences</h2>
-  <h3>Web</h3>
-  <h4><i class="fab fa-html5"></i> HTML</h4>
-  <div class="bar 99"></div>
-  <h4><i class="fab fa-css3"></i> CSS</h4>
-  <div class="bar 90"></div>
-  <h3>Language Informatique</h3>
-  <div class="Competence">
-  <h4><i class="fab fa-js"></i> JS</h4>
-  <div class="bar 70"></div>
-  <h4><i class="fab fa-php"></i> PHP</h4>
-  <div class="bar 85"></div>
-  <h4><i class="fab fa-python"></i> Python</h4>
-  <div class="bar 90"></div>
-  <h4><i class="fab fa-java"></i> Java</h4>
-  <div class="bar 20"></div>
-  <h3>Base De Données</h3>
-  <h4>mySQL</h4>
-  <div class="bar 100"></div>
-  <h4>Elasticsearch</h4>
-  <div class="bar 80"></div>
-  <h3>Framework</h3>
-  <p>Symfony</p>
-  <p>Django</p>
-  <h3>Autres Compétences</h3>
-  <p>Git</p>
-  <p>Anglais</p>
-</section>
-<section>
-  <h2>Réalisations</h2>
-  <div id="lienRealisation">
-    <a href="{{path('piece')}}">Piece full CSS</a>
-    <a href="{{path('canvas')}}">Canvas</a>
-    <a href="{{path('bdd')}}">Bdd</a>
-    <a href="{{path('tapis')}}">Tapis</a>
-  </div>
-</section>
-<section>
-  <h2>Parcours</h2>
-  <p>2012-2018: Université Paul Sabatier en physique</p>
-  <p>fin 2018: Formation 3WA en dévelopement web</p>
-  <p>février-2019 juillet-2019: stage de fin de formation à la DGAC sur la suite elasticsearch</p>
-</section>
-<section>
-  <h2>Informations Suplémentaires</h2>
-  <p>
-    Bientot à la piscine de <a href="https://www.le-101.fr/">l'ecole 101</a> à lyon
-  </p>
-</section>
-<section>
-  <p id="contactBtn"><a href="{{path('contact')}}"><i class="fas fa-envelope"></i> Me contacter</a></p>
+  <h2></h2>
+  <section>
+    <h2>Présentation Générale</h2>
+    <h2>Situation Actuelle</h2>
+    <p>Je suis actuellement étudiant à
+      <a href="https://www.42lyon.fr/">
+        42 lyon
+      </a>
+    </p>
+  </section>
+  <section id="competence">
+    <h2>Compétences</h2>
+    <h3>Web</h3>
+    <h4>
+      <i class="fab fa-html5"></i>
+      HTML</h4>
+    <div class="bar 99"></div>
+    <h4>
+      <i class="fab fa-css3"></i>
+      CSS</h4>
+    <div class="bar 90"></div>
+    <h3>Language Informatique</h3>
+    <div class="Competence">
+      <h4>
+        <i class="fab fa-js"></i>
+        JS</h4>
+      <div class="bar 70"></div>
+      <h4>
+        <div class="language">
+          <img class="logoLang" src="{{ asset('build/C.png') }}"> C </img>
+        </div>
+      </h4>
+      <div class="bar 85"></div>
+      <h4>
+        <i class="fab fa-php"></i>
+        PHP</h4>
+      <div class="bar 85"></div>
+      <h4>
+        <i class="fab fa-python"></i>
+        Python</h4>
+      <div class="bar 90"></div>
+      <h4>
+        <i class="fab fa-java"></i>
+        Java</h4>
+      <div class="bar 20"></div>
+      <h3>Base De Données</h3>
+      <h4>mySQL</h4>
+      <div class="bar 100"></div>
+      <h4>Elasticsearch</h4>
+      <div class="bar 80"></div>
+      <h3>Framework</h3>
+      <p>Symfony</p>
+      <p>Django</p>
+      <h3>Autres Compétences</h3>
+      <p>Git</p>
+      <p>Anglais</p>
+    </section>
+    <section>
+      <h2>Réalisations</h2>
+      <div id="lienRealisation">
+        <a href="{{path('piece')}}">Piece full CSS</a>
+        <a href="{{path('canvas')}}">Canvas</a>
+        <a href="{{path('bdd')}}">Bdd</a>
+        <a href="{{path('tapis')}}">Tapis</a>
+      </div>
+    </section>
+    <section>
+      <h2>Autre Projet</h2>
+      <a href="http://2048.camelcaesars.tech/"><img class="visual" src="{{ asset('build/camelCaesar-2048.png') }}" alt="camelcaesars-2048"></a>
+    </section>
+    <section>
+      <h2>Parcours</h2>
+      <p>2012-2018: Université Paul Sabatier en physique</p>
+      <p>fin 2018: Formation 3WA en dévelopement web</p>
+      <p>février-2019 juillet-2019: stage de fin de formation à la DGAC sur la suite elasticsearch</p>
+      <p>octobre 2020 : Ecole 42 lyon</p>
+    </section>
+    <section>
+      <h2>Informations Suplémentaires</h2>
+      <p>
+        <a href="https://www.42lyon.fr/">Ecole 42 lyon</a>
+      </p>
+      <p>
+        <a href="https://3wa.fr/">3W Academy</a>
+      </p>
+      <p>
+        <a href="https://www.elastic.co/fr/what-is/elk-stack">La suite ELK</a>
+      </p>
+    </section>
+    <section>
+      <p id="contactBtn">
+        <a href="{{path('contact')}}">
+          <i class="fas fa-envelope"></i>
+          Me contacter</a>
+      </p>
 
-</section>
+    </section>
 
-{% endblock %}
+  {% endblock %}

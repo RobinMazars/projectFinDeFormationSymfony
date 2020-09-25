@@ -1,7 +1,8 @@
-- [ ] change fe -> fr
-- [ ] remove console.log partout
-- [ ] piece : mettre des bouton pour que les piece tourne sur mobile
-- [ ] tapis : metre une demo et mobile compatible
-- [ ] updade info
-  - [ ] change CV
-  - [ ] change lien vers 101 -> 42
+- [X] change fe -> fr
+- [X] remove console.log partout
+- [X] piece : mettre des bouton pour que les piece tourne sur mobile
+- [X] tapis : metre une demo et mobile compatible
+- [X] updade info
+  - [X] change CV
+  - [X] change lien vers 101 -> 42
+- [X] lien vers 2048

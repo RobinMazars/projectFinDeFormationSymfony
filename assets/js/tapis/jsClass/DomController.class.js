@@ -1,4 +1,4 @@
-console.log('class DomController load');
+// console.log('class DomController load');
 export default class DomController {
   // controlle la plupart des création,detection,supression d'element HTML
   constructor() {
@@ -6,7 +6,7 @@ export default class DomController {
     var div =this.creationSaveLoadButton()
     $("#sousSection").prepend(div)
     //this.creatAll()
-    console.log('endDomController');
+    // console.log('endDomController');
   }
   creationAnimationButton(){
     var div =this.creationDomElement('div','animationButton')

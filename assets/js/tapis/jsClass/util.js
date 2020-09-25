@@ -1,5 +1,5 @@
 // fichier pour les fonctions utilitaires
-console.log("util.js");
+// console.log("util.js");
 
 export function refresh(element = "#frame") {
   $(element).html($(element).html());
@@ -33,6 +33,6 @@ export function sleep(milliseconds) {
   }
 }
 export function affTest() {
-  console.log('hello there');
+  // console.log('hello there');
 
 }

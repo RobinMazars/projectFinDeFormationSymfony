@@ -3,41 +3,52 @@
   Tapis
 {% endblock %}
 {% block link %}
-{{parent()}}
-{{encore_entry_link_tags('tapisCss')}}
+  {{parent()}}
+  {{encore_entry_link_tags('tapisCss')}}
 
 {% endblock %}
 {% block content %}
-<section>
-  <h1>Exemple en JavaScript : Tapis </h1>
   <section>
-    <ul id="regle">
-      <li>Cliquez pour ajouter un element</li>
-      <li>Souris sur un object + T pour changer son orientation</li>
-      <li>Souris sur un object + R pour tourner</li>
-    </ul>
-  </section>
-  <section id="containerSvg">
-    <div id="sousSection">
-      <div id="containerFrameControl">
-        <div id="frame">
-          <svg id="svg">
-          </svg>
-        </div>
-        <div id="animationButton">
-          <button type="button" id="start" >Play <i class="fas fa-play"></i></button>
-          <button type="button" id="oneStep" >Un Pas <i class="fas fa-step-forward"></i></button>
-          <button type="button"  id="stop" >Stop <i class="fas fa-pause"></i></button>
-          <button type="button"  id="clearSvg" >Clear All <i class="fas fa-trash-alt"></i></button>
+    <h1>Exemple en JavaScript : Tapis
+    </h1>
+    <section>
+      <ul id="regle">
+        <li>Cliquez pour ajouter un element</li>
+        <li>Souris sur un object + T pour changer son orientation</li>
+        <li>Souris sur un object + R pour tourner</li>
+      </ul>
+    </section>
+    <section>
+      <button type="button" id="BtnDemo" name="button">Cliquez ici pour une démonstration</button>
+    </section>
+    <section id="containerSvg">
+      <div id="sousSection">
+        <div id="containerFrameControl">
+          <div id="frame">
+            <svg id="svg"></svg>
+          </div>
+          <div id="animationButton">
+            <button type="button" id="start">Play
+              <i class="fas fa-play"></i>
+            </button>
+            <button type="button" id="oneStep">Un Pas
+              <i class="fas fa-step-forward"></i>
+            </button>
+            <button type="button" id="stop">Stop
+              <i class="fas fa-pause"></i>
+            </button>
+            <button type="button" id="clearSvg">Clear All
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
         </div>
       </div>
-  </div>
-</section>
-<section>
-  Petit exemple en JavaScript qui consiste à transporter des minerais avec des tapis comme dans des usines
-</section>
-{% endblock %}
-{% block bottomLink %}
-{{parent()}}
-{{encore_entry_script_tags('tapisJs')}}
-{% endblock %}
+    </section>
+    <section>
+      Petit exemple en JavaScript qui consiste à transporter des minerais avec des tapis comme dans des usines
+    </section>
+  {% endblock %}
+  {% block bottomLink %}
+    {{parent()}}
+    {{encore_entry_script_tags('tapisJs')}}
+  {% endblock %}

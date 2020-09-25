@@ -1,9 +1,9 @@
-console.log('class EventController load');
+// console.log('class EventController load');
 
 export default class EventController {
   // controlle les cliques souris et clavier
-  constructor(manipulator,saver) {
-    console.log('eventController constructor');
+  constructor(manipulator, saver) {
+    // console.log('eventController constructor');
     this.manipulator = manipulator
     this.saver = saver
     this.actualPosMouse = null
@@ -17,29 +17,30 @@ export default class EventController {
     var self = this // HACK:
     $("#oneStep").click(self.animOneStep);
     $("#start").click(self.animRepeat);
+    $("#BtnDemo").click(self.demo);
     this.bindClearAll()
     this.checkSave()
     this.bindAllSaveLoadButtons()
   }
-  clearSvg(){
+  clearSvg() {
     self.manipulator.removeAllObject()
   }
-  checkSave(){
-    var listeSave=this.saver.checkSave()
-    console.log(listeSave);
+  checkSave() {
+    var listeSave = this.saver.checkSave()
+    // console.log(listeSave);
     $(".save").addClass('empty')
     $(".load").addClass('notSave')
     $(".supre").addClass('notSave')
     for (var i = 0; i < listeSave.length; i++) {
-      $(".save[data-id="+listeSave[i]+"]").removeClass('empty')
-      $(".load[data-id="+listeSave[i]+"]").removeClass('notSave')
-      $(".supre[data-id="+listeSave[i]+"]").removeClass('notSave')
+      $(".save[data-id=" + listeSave[i] + "]").removeClass('empty')
+      $(".load[data-id=" + listeSave[i] + "]").removeClass('notSave')
+      $(".supre[data-id=" + listeSave[i] + "]").removeClass('notSave')
     }
   }
-  bindAllSaveLoadButtons(){
-    self=this
-    $(function(){
-      console.log('bind All');
+  bindAllSaveLoadButtons() {
+    self = this
+    $(function() {
+      // console.log('bind All');
       self.bindSaveButton()
       self.bindLoadButton()
       self.bindSupreButton()
@@ -47,75 +48,75 @@ export default class EventController {
     })
 
   }
-  changeButton(id){
-    console.log('toogle');
-    $(".save[data-id="+id+"]").toggleClass('empty')
-    $(".load[data-id="+id+"]").toggleClass('notSave')
-    $(".supre[data-id="+id+"]").toggleClass('notSave')
+  changeButton(id) {
+    // console.log('toogle');
+    $(".save[data-id=" + id + "]").toggleClass('empty')
+    $(".load[data-id=" + id + "]").toggleClass('notSave')
+    $(".supre[data-id=" + id + "]").toggleClass('notSave')
   }
-  unbindAllSaveLoadButton(){
+  unbindAllSaveLoadButton() {
     this.unbindLoadButton()
     this.unbindSaveButton()
     this.unbindSupreButton()
     this.unbindClearAll()
   }
-  bindClearAll(){
+  bindClearAll() {
     $("#clearSvg").click(self.clearSvg);
   }
-  unbindClearAll(){
+  unbindClearAll() {
     $("#clearSvg").unbind('click')
   }
-  unbindLoadButton(){
+  unbindLoadButton() {
     $(".load").unbind('click')
   }
-  unbindSaveButton(){
+  unbindSaveButton() {
     $(".save").unbind('click')
   }
-  unbindSupreButton(){
+  unbindSupreButton() {
     $(".supre").unbind('click')
   }
-  bindSaveButton(){
+  bindSaveButton() {
     this.unbindSaveButton()
-    $(".save.empty").click(function(){
-        self.save($(this).attr('data-id'))
+    $(".save.empty").click(function() {
+      self.save($(this).attr('data-id'))
     });
   }
-  bindLoadButton(){
+  bindLoadButton() {
     this.unbindLoadButton()
-    $(".load:not(.notSave)").click(function(){
-        self.load($(this).attr('data-id'))
+    $(".load:not(.notSave)").click(function() {
+      self.load($(this).attr('data-id'))
     });
   }
-  bindSupreButton(){
+  bindSupreButton() {
     this.unbindSupreButton()
-    $(".supre:not(.notSave)").click(function(){
-        self.supre($(this).attr('data-id'))
+    $(".supre:not(.notSave)").click(function() {
+      self.supre($(this).attr('data-id'))
     });
   }
 
-  save(saveName){
+  save(saveName) {
     this.saver.save(saveName)
     this.changeButton(saveName)
     this.bindAllSaveLoadButtons()
   }
-  load(saveName){
+  load(saveName) {
     this.saver.load(saveName)
   }
-  supre(saveName){
+  supre(saveName) {
     this.saver.clearSave(saveName)
     this.changeButton(saveName)
     this.bindAllSaveLoadButtons()
   }
   bindOnCLick() {
-    console.log("bindOnCLick");
+    // console.log("bindOnCLick");
     var self = this // HACK:
     $("#frame").mousedown(function(event) {
       //console.log("bind");
       self.onClick(event)
     });
   }
-  unbindOnCLick(){
-    console.log("unbindOnCLick");
+  unbindOnCLick() {
+    // console.log("unbindOnCLick");
     var self = this
     $("#frame").off("mousedown");
 
@@ -134,30 +135,32 @@ export default class EventController {
   }
   onClick(event) {
     var posMouse = this.getPosMouse(event);
-    console.log(posMouse);
+    // console.log(posMouse);
     var pos = this.manipulator.calcPos(posMouse)
     this.manipulator.placeObject(this.manipulator.selected, pos)
   }
-  animRepeat(){
+  animRepeat() {
     self.unbindOnCLick()
     $("#start").unbind('click')
     $("#oneStep").unbind('click')
     self.unbindAllSaveLoadButton()
     $("#stop").click(self.stopAnim);
     self.anim()
-    self.loop =setInterval(self.anim,550)
+    self.loop = setInterval(self.anim, 550)
   }
-  animOneStep(){
+  animOneStep() {
     $("#oneStep").unbind('click')
     self.unbindAllSaveLoadButton()
     self.anim()
-    setTimeout(function(){
+    setTimeout(function() {
       $("#oneStep").click(self.animOneStep);
       self.bindAllSaveLoadButtons()
-    },500)
+    }, 500)
 
   }
-  stopAnim(){
+  stopAnim() {
+    $("#BtnDemo").unbind('click')
+    $("#BtnDemo").click(self.demo);
     self.bindOnCLick()
     $("#stop").unbind('click')
     clearInterval(self.loop)
@@ -186,22 +189,20 @@ export default class EventController {
           self.actualPosMouse = pos;
           self.manipulator.clearGhost()
           // console.log("changement case");
-          self.manipulator.placeObject(self.manipulator.selected, self.actualPosMouse,null,true)
+          self.manipulator.placeObject(self.manipulator.selected, self.actualPosMouse, null, true)
         }
         $(document).unbind('keypress')
         $(document).keypress(function(e) {
           var touche = String.fromCharCode(e.which);
-          console.log(touche);
+          // console.log(touche);
           var posMouse = self.getPosMouse(event2);
           var pos = self.manipulator.calcPos(posMouse)
-          console.log(pos);
+          // console.log(pos);
           if (touche == 't') {
             self.manipulator.changeUrlDef(pos)
-          }
-          else if (touche == 'r') {
+          } else if (touche == 'r') {
             self.manipulator.rotateObject(pos)
-          }
-          else if (touche == 'x') {
+          } else if (touche == 'x') {
             self.manipulator.removeObjectOnClick(pos)
           }
         });
@@ -213,7 +214,18 @@ export default class EventController {
       $(document).unbind('keypress')
       $('h1').css('background', '');
     });
-
   }
+  demo() {
+    $("#BtnDemo").unbind('click')
+    // console.log("demo start");
+    self.manipulator.demo()
+    setTimeout(function() {
+      self.animRepeat()
+    }, 1000);
+    setTimeout(function() {
+      self.stopAnim()
+      $("#BtnDemo").click(self.demo);
 
+    }, 10000);
+  }
 }
