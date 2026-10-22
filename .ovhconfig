@@ -1,0 +1,10 @@
+; Configuration OVH - a placer a la RACINE du FTP (au meme niveau que www/)
+; doc : https://docs.ovhcloud.com/fr/guides/web-cloud/web-hosting/configure-your-web-hosting
+
+app.engine=php
+app.engine.version=8.5
+
+http.firewall=none
+environment=production
+
+container.image=stable64
