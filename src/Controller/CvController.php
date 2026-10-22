@@ -2,12 +2,10 @@
 namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Attribute\Route;
 class CvController extends AbstractController
 {
-    /**
-     * @Route("/Cv", name="cv", methods={"GET"})
-     */
+    #[Route('/Cv', name: 'cv', methods: ['GET'])]
     public function cv()
     {
         return $this->render('cv/cv.html.twig');

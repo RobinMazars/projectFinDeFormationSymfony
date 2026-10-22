@@ -1,16 +1,14 @@
 <?php
 namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Attribute\Route;
 use App\Utils\Chercheur;
 class BddController extends AbstractController
 {
 
-    /**
-     * @Route("/Bdd/{actualPage}",defaults={"actualPage"=1},name="bdd", methods={"GET"})
-     *
-     */
+    #[Route('/Bdd/{actualPage}', name: 'bdd', defaults: ['actualPage' => 1], requirements: ['actualPage' => '\d+'], methods: ['GET'])]
     public function bdd($actualPage)
     {
       // affiche la page bdd.html.twig de base
@@ -24,13 +22,12 @@ class BddController extends AbstractController
                                                 'namePath'=>__FUNCTION__]);
     }
 
-    /**
-     * @Route("/Bdd/search/{actualPage<\d+>}", name="search", methods={"GET"})
-     */
-    public function search($actualPage){
+    #[Route('/Bdd/search/{actualPage<\d+>}', name: 'search', methods: ['GET'])]
+    public function search($actualPage, Request $request){
       // affiche la page bdd.html.twig en après une recherche dans la base
       $pages=$this->calcPagination(intval($actualPage));
-      $recherche=htmlspecialchars($_GET['recherche']);
+      $recherche=trim((string) $request->query->get('recherche', ''));
+      $recherche=mb_substr($recherche,0,100);
       $chercheur=new Chercheur();
       $nbrItemByPageOverdrive=50;
       $result=$chercheur->getResearch($nbrItemByPageOverdrive,$pages['offset'],$recherche);
@@ -43,6 +40,7 @@ class BddController extends AbstractController
     public function calcPagination($actualPage){
       // function pour calculer crées la pagination
       $nbrItemByPage=10;
+      $actualPage=max(1,(int) $actualPage);
       if ($actualPage>1) {
           $previousPage=$actualPage-1;
       }
