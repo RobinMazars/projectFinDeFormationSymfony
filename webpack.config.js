@@ -43,11 +43,6 @@ Encore
       from: './assets/media/image',
       pattern: /\.(ico|png)$/,
     })
-    .copyFiles({
-      from: './assets/media/',
-      to:'/file/[name].[ext]',
-      pattern: /\.pdf$/,
-    })
     .autoProvidejQuery()
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
