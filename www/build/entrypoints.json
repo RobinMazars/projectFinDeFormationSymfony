@@ -1,98 +1,95 @@
 {
   "entrypoints": {
-    "tapisCss": {
-      "js": [
-        "/build/runtime.js"
-      ],
-      "css": [
-        "/build/tapisCss.css"
-      ]
-    },
     "navJs": {
       "js": [
-        "/build/runtime.js",
-        "/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
-        "/build/vendors~navJs~tapisJs.js",
-        "/build/navJs.js"
-      ]
-    },
-    "canvasJs": {
-      "js": [
-        "/build/runtime.js",
-        "/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
-        "/build/canvasJs.js"
-      ]
-    },
-    "tapisJs": {
-      "js": [
-        "/build/runtime.js",
-        "/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
-        "/build/vendors~navJs~tapisJs.js",
-        "/build/vendors~tapisJs.js",
-        "/build/tapisJs.js"
-      ]
-    },
-    "masterCss": {
-      "js": [
-        "/build/runtime.js"
-      ],
-      "css": [
-        "/build/masterCss.css"
-      ]
-    },
-    "normalizeCss": {
-      "js": [
-        "/build/runtime.js"
-      ],
-      "css": [
-        "/build/normalizeCss.css"
+        "/build/runtime.5662d965.js",
+        "/build/692.09f6f9e9.js",
+        "/build/navJs.ea948f4b.js"
       ]
     },
     "barJs": {
       "js": [
-        "/build/runtime.js",
-        "/build/vendors~barJs~canvasJs~navJs~tapisJs.js",
-        "/build/barJs.js"
+        "/build/runtime.5662d965.js",
+        "/build/692.09f6f9e9.js",
+        "/build/barJs.4e3034a7.js"
+      ]
+    },
+    "canvasJs": {
+      "js": [
+        "/build/runtime.5662d965.js",
+        "/build/692.09f6f9e9.js",
+        "/build/canvasJs.0dd21233.js"
+      ]
+    },
+    "tapisJs": {
+      "js": [
+        "/build/runtime.5662d965.js",
+        "/build/692.09f6f9e9.js",
+        "/build/tapisJs.827bf1b7.js"
+      ]
+    },
+    "masterCss": {
+      "js": [
+        "/build/runtime.5662d965.js"
+      ],
+      "css": [
+        "/build/masterCss.a9e27a65.css"
+      ]
+    },
+    "normalizeCss": {
+      "js": [
+        "/build/runtime.5662d965.js"
+      ],
+      "css": [
+        "/build/normalizeCss.72fe7685.css"
+      ]
+    },
+    "tapisCss": {
+      "js": [
+        "/build/runtime.5662d965.js"
+      ],
+      "css": [
+        "/build/tapisCss.ac0bd9ed.css"
       ]
     },
     "barCss": {
       "js": [
-        "/build/runtime.js"
+        "/build/runtime.5662d965.js"
       ],
       "css": [
-        "/build/barCss.css"
+        "/build/barCss.9ad2080b.css"
       ]
     },
     "pieceCss": {
       "js": [
-        "/build/runtime.js"
+        "/build/runtime.5662d965.js"
       ],
       "css": [
-        "/build/pieceCss.css"
+        "/build/pieceCss.a562b686.css"
       ]
     },
     "canvasCss": {
       "js": [
-        "/build/runtime.js"
+        "/build/runtime.5662d965.js"
       ],
       "css": [
-        "/build/canvasCss.css"
+        "/build/canvasCss.e04d9c90.css"
       ]
     },
     "bddCss": {
       "js": [
-        "/build/runtime.js"
+        "/build/runtime.5662d965.js"
       ],
       "css": [
-        "/build/bddCss.css"
+        "/build/bddCss.f4d7edda.css"
       ]
     },
     "cvCss": {
       "js": [
-        "/build/runtime.js"
+        "/build/runtime.5662d965.js"
       ],
       "css": [
-        "/build/cvCss.css"
+        "/build/cvCss.419004ae.css"
       ]
     }
   }

@@ -1,0 +1,81 @@
+button{
+  border-radius: 4px;
+
+}
+#sousSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#regle{
+  list-style: none;
+}
+#frame {
+  margin: auto;
+  width: 500px;
+  height: 500px;
+  padding: 0;
+}
+#svg {
+  width: 100%;
+  height: 100%;
+}
+object {
+  border: 1px black solid;
+}
+#selector {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  }
+#selector .selectorItem {
+  padding: 15px;
+}
+#selector > .selected {
+  background-color: steelblue;
+  color: white;
+
+}
+#loadSave {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 25%;
+  font-size: 0.9rem;
+}
+.saveLoad-Buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2%;
+}
+.saveLoad-Buttons * {
+  margin: 2%;
+}
+.load:not(.notSave),
+.supre:not(.notSave),.save.empty{
+  background-color: steelblue;
+  color: white;
+}
+.load.notSave,
+.supre.notSave {
+  filter: opacity(0.2);
+}
+.save:not(.empty) {
+  filter: opacity(0.2);
+}
+.supre:not(.notSave):hover {
+  background-color: firebrick;
+}
+#animationButton {
+  margin: 5px;
+}
+#animationButton > * {
+  background-color: steelblue;
+  color: white;
+  font-size: 1.5rem;
+}
+#animationButton > *:hover {
+  background-color: firebrick;
+}
+

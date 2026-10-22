@@ -1,6 +1,6 @@
-var Encore = require('@symfony/webpack-encore');
-// command for update : yarn encore dev
-// or:  yarn encore dev --watch   for auto update
+var Encore = require('@symfony/webpack-encore').default;
+// command for update : npm run dev
+// or:  npm run watch   for auto update
 Encore
     // directory where compiled assets will be stored
     .setOutputPath('www/build/')
@@ -27,7 +27,7 @@ Encore
     // .addEntry('layout', './assets/js/layout.js')
     .addStyleEntry('masterCss', './assets/css/master.css')
     .addStyleEntry('normalizeCss', './assets/css/normalize.css')
-    .addStyleEntry('tapisCss', './assets/css/Tapis/tapis.css')
+    .addStyleEntry('tapisCss', './assets/css/Tapis/Tapis.css')
     .addStyleEntry('barCss', './assets/css/home/home.css')
     .addStyleEntry('pieceCss', './assets/css/piece/piece.css')
     .addStyleEntry('canvasCss', './assets/css/canvas/canvas.css')
@@ -67,16 +67,9 @@ Encore
      * https://symfony.com/doc/current/frontend.html#adding-more-features
      */
     .cleanupOutputBeforeBuild()
-    .enableBuildNotifications()
-    .enableSourceMaps()
+    .enableSourceMaps(!Encore.isProduction())
     // enables hashed filenames (e.g. app.abc123.css)
     .enableVersioning(Encore.isProduction())
-
-    // enables @babel/preset-env polyfills
-    .configureBabel(() => {}, {
-        useBuiltIns: 'usage',
-        corejs: 3
-    })
 
     // enables Sass/SCSS support
     //.enableSassLoader()
